@@ -827,6 +827,16 @@ html:not(.h) .cjk.a{display:none}
     scrollTo({ top: target ? Math.min(max, target._x) : (e.key === 'ArrowRight' ? max : 0), behavior: reduce.matches ? 'auto' : 'smooth' });
   });
 
+  // Wheel / trackpad: vertical and sideways swipes both move the story
+  addEventListener('wheel', e => {
+    if (!H || e.ctrlKey) return;
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1;
+    const d = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * unit;
+    if (!d) return;
+    e.preventDefault();
+    scrollTo(0, Math.max(0, Math.min(max, scrollY + d)));
+  }, { passive: false });
+
   addEventListener('scroll', () => { dirty = true; }, { passive: true });
   let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(measure, 120); });
   mq.addEventListener?.('change', measure);
