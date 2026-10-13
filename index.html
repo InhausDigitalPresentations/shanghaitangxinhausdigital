@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&text=%E4%B8%8A%E6%B5%B7%E7%81%98%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%BB%9A%E6%88%BF%E5%9F%8E%E5%B8%82%C2%B7&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&text=%E4%B8%8A%E6%B5%B7%E7%81%98%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%BB%9A%E6%88%BF%E5%9F%8E%E5%B8%82%C2%B7%E9%9D%9C%E7%81%AB&display=swap">
 <link rel="preload" as="image" href="img/cover_n.webp" fetchpriority="high">
 <style>
 @property --x{syntax:'*';inherits:false}@property --y{syntax:'*';inherits:false}@property --r{syntax:'*';inherits:false}@property --b{syntax:'*';inherits:false}@property --wd{syntax:'*';inherits:false}@property --ht{syntax:'*';inherits:false}
@@ -122,6 +122,13 @@ html:not(.h) .credit{bottom:calc(env(safe-area-inset-bottom,0px) + 12px);font-si
 
 .back{background:none;border:0;color:inherit;cursor:pointer;font:500 11px/1 var(--f-sans);letter-spacing:.22em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid currentColor}
 .dsk{display:none}
+.rhythm{display:flex;gap:calc(var(--u)*.6)}
+.rhythm figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0;height:100%}
+.rhythm .ph{flex:1;min-height:0}
+.rhythm figcaption{white-space:nowrap;overflow:hidden;text-overflow:clip}
+html:not(.h) .rhythm{height:62vw;gap:4px}
+html:not(.h) .rhythm .ph{aspect-ratio:auto;height:auto}
+html:not(.h) .rhythm figcaption{display:none}
 .words-behind h2{z-index:1}.words-behind .ph{z-index:2}
 
 /* =========================================================
@@ -183,7 +190,7 @@ html:not(.h) .cjk.a{display:none}
   <nav aria-label="Sections">
     <a href="#intro" data-go="intro">Intro</a>
     <a href="#cooking" data-go="cooking">01 Cooking</a>
-    <a href="#city" data-go="city">02 City</a>
+    <a href="#calm" data-go="calm">02 Calm &amp; Fire</a>
   </nav>
 </header>
 
@@ -275,11 +282,11 @@ html:not(.h) .cjk.a{display:none}
       <span class="pg" data-page="cooking">p. 06</span>
       <span class="ph"><img src="img/idx_fire_n.webp" alt="" loading="lazy" decoding="async" style="--op:50% 60%"></span>
     </a>
-    <a href="#city" data-go="city">
+    <a href="#calm" data-go="calm">
       <span class="n">02</span>
-      <span class="ti"><span class="disp t-l">The City</span><span class="disp it t-s" style="opacity:.75">Shanghai Tang takes Abu Dhabi.</span></span>
-      <span class="pg" data-page="city">p. 17</span>
-      <span class="ph"><img src="img/idx_desert_n.webp" alt="" loading="lazy" decoding="async" style="--op:40% 40%"></span>
+      <span class="ti"><span class="disp t-l">Calm &amp; Fire</span><span class="disp it t-s" style="opacity:.75">Dinner for two. A kitchen on fire.</span></span>
+      <span class="pg" data-page="calm">p. 17</span>
+      <span class="ph"><img src="img/k_idx.webp" alt="" loading="lazy" decoding="async" style="--op:50% 50%"></span>
     </a>
   </div>
 </section>
@@ -449,174 +456,172 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <section class="panel iv" data-sec="or" style="--w:156">
-  <h2 class="disp t-l a" style="--x:8%;--y:20%;--wd:58%">What if Shanghai Tang leaves the restaurant <em class="rd">entirely?</em></h2>
+  <h2 class="disp t-l a" style="--x:8%;--y:20%;--wd:58%">What if the whole restaurant existed for <em class="rd">only two people?</em></h2>
   <figure class="ph a rv px m-r" style="--r:0;--y:0;--wd:22%;--ht:100%;--ar:3/4" data-s=".05">
-    <img src="img/t_sliver_n.webp" alt="Sliver of a desert dining scene: red brocade, lantern, dunes" loading="lazy" decoding="async">
+    <img src="img/k_sliver.webp" alt="Sliver of the spotlit table: a woman in a red suit seated at dinner" loading="lazy" decoding="async">
   </figure>
 </section>
 
 <!-- ============ DIRECTION 02 ============ -->
 
 <!-- 17 title -->
-<section class="panel ja" id="city" data-sec="city" style="--w:174">
-  <h2 class="mask a" style="--x:2%;--y:4%;font-size:calc(var(--u)*80);--img:url(img/y_desert_n.webp);--bp:40% 50%" aria-label="02">02</h2>
-  <div class="a" style="--x:56%;--y:30%;--wd:21%">
+<section class="panel ja" id="calm" data-sec="calm" style="--w:174">
+  <h2 class="mask a" style="--x:2%;--y:4%;font-size:calc(var(--u)*80);--img:url(img/k_mask.webp);--bp:45% 50%" aria-label="02">02</h2>
+  <div class="a" style="--x:56%;--y:28%;--wd:21%">
     <p class="cap" style="margin-bottom:calc(var(--u)*2.4)">Direction 02 of 02</p>
-    <h2 class="disp t-xl" style="line-height:.86">The<br>City</h2>
-    <p class="disp it t-s" style="margin-top:calc(var(--u)*3)">Shanghai Tang takes Abu Dhabi.</p>
+    <h2 class="disp t-xl" style="line-height:.86">Calm<br><em>&amp; Fire</em></h2>
+    <p class="disp it t-s" style="margin-top:calc(var(--u)*3)">At the table, nothing moves. In the kitchen, nothing stops.</p>
   </div>
   <figure class="ph a rv m-r" style="--r:3.5%;--y:10%;--wd:17%;--ht:80%;--ar:3/4">
-    <img src="img/y_title_n.webp" alt="Model in red brocade eating at the port, cool grade" loading="lazy" decoding="async">
+    <img src="img/k_tstrip.webp" alt="Model in a beige linen suit seated at the spotlit table" loading="lazy" decoding="async">
   </figure>
-  <div class="cjk a" style="--x:77.4%;--y:10%;opacity:.75" aria-hidden="true">城市 · 阿布扎比</div>
+  <div class="cjk a" style="--x:77.4%;--y:10%;opacity:.75" aria-hidden="true">靜 · 火</div>
 </section>
 
 <!-- 18 premise -->
-<section class="panel k" data-sec="city" style="--w:204">
-  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">Food and fashion appear where we least expect them.</p>
-  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:40% 40%" data-s=".05">
-    <img src="img/y_premise_n.webp" alt="Two models in red and green lounge at a waterfront fish market over a seafood platter" loading="lazy" decoding="async">
+<section class="panel k" data-sec="calm" style="--w:204">
+  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">An empty dining room. One table. Nothing else exists.</p>
+  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 62%" data-s=".05">
+    <img src="img/k_hero.webp" alt="Empty dark restaurant with one spotlit table for two: a woman in a red suit and a man in a beige suit" loading="lazy" decoding="async">
   </figure>
-  <h2 class="disp t-l a" style="--x:4%;--b:5%">The restaurant leaves the restaurant.</h2>
+  <h2 class="disp t-l a" style="--x:4%;--b:5%">The restaurant, for two.</h2>
 </section>
 
-<!-- 19 contrast -->
-<section class="panel iv" data-sec="city" style="--w:212">
-  <p class="cap a" style="--x:4%;--y:8%">Location reference — as found</p>
-  <div class="a sheet" style="--x:4%;--y:14%;--wd:37%;grid-template-columns:repeat(2,1fr);background:#ddd3c0">
-    <figure class="frame"><div class="ph"><img src="img/scout1.webp" alt="Fish market hall, as found" loading="lazy" decoding="async"></div><figcaption style="color:var(--muted-i)">A1 — Hall</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/scout2.webp" alt="Fish market aisles under fluorescent light" loading="lazy" decoding="async"></div><figcaption style="color:var(--muted-i)">A2 — Aisle</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/scout3.webp" alt="Fish counters and shoppers" loading="lazy" decoding="async"></div><figcaption style="color:var(--muted-i)">A3 — Counter</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/scout4.webp" alt="Fish on ice" loading="lazy" decoding="async"></div><figcaption style="color:var(--muted-i)">A4 — Ice</figcaption></figure>
+<!-- 19 two speeds -->
+<section class="panel iv" data-sec="calm" style="--w:212">
+  <p class="cap a" style="--x:4%;--y:8%">Two speeds</p>
+  <figure class="ph a rv m-l" style="--x:4%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/k_calm.webp" alt="Black and white: the woman in the suit seated at the spotlit table, perfectly still" loading="lazy" decoding="async">
+  </figure>
+  <div class="a" style="--x:30.5%;--y:58%;--wd:17%">
+    <h2 class="disp it t-xl">Calm.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">Locked off. Long takes. Silence.</p>
   </div>
-  <p class="mono a" style="--x:4%;--b:8%;--wd:37%">Fluorescent light. Steel counters. A working morning.</p>
-  <div class="a dsk" style="--x:44.5%;--y:14%;--wd:1px;--ht:72%;background:currentColor;opacity:.25"></div>
-  <figure class="ph a rv m-r" style="--x:48%;--y:6%;--wd:24%;--ht:84%;--ar:3/4">
-    <img src="img/y_teal_n.webp" alt="Model in teal brocade eating with chopsticks at the fish market" loading="lazy" decoding="async">
-  </figure>
-  <p class="mono a dsk" style="--x:48%;--b:5%">As shot</p>
-  <h2 class="disp t-m a" style="--x:75.5%;--y:28%;--wd:21%">Couture where you <em class="rd">don’t</em> expect it.</h2>
-</section>
-
-<!-- 20 fish market -->
-<section class="panel k" data-sec="city" style="--w:232">
-  <div class="a" style="--r:3%;--y:9%;--wd:14%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Location 01 — Fish market</p>
-    <h2 class="disp t-m">The fish market becomes a fashion set.</h2>
+  <div class="a dsk" style="--x:50%;--y:14%;--wd:1px;--ht:76%;background:currentColor;opacity:.25"></div>
+  <div class="a" style="--x:53%;--y:14%;--wd:17%">
+    <h2 class="disp it t-xl rd">Fire.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">Handheld. A few frames per cut. Noise.</p>
   </div>
-  <figure class="ph a px bleed" style="--x:22%;--y:9%;--wd:60%;--ht:72%;--ar:16/10" data-s=".05">
-    <img src="img/y_market_n.webp" alt="Three models in red, green and teal brocade posing among the fish counters" loading="lazy" decoding="async">
+  <figure class="ph a rv m-r" style="--x:72%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/k_firetall.webp" alt="Flames exploding from a wok in a professional kitchen" loading="lazy" decoding="async">
   </figure>
-  <figure class="ph a rv m-l" style="--x:4%;--y:20%;--wd:22%;--ht:34%;--ar:4/3;z-index:2">
-    <img src="img/y_m_chop_n.webp" alt="Chopsticks lifting a langoustine" loading="lazy" decoding="async">
-  </figure>
-  <figure class="ph a rv m-r dsk" style="--x:76%;--y:58%;--wd:20%;--ht:30%;z-index:2">
-    <img src="img/y_m_lobster_n.webp" alt="Lobster on ice" loading="lazy" decoding="async">
-  </figure>
-  <figure class="ph a rv m-n" style="--x:8%;--y:62%;--wd:12%;--ht:22%;--ar:4/3;z-index:2">
-    <img src="img/y_m_oyster_n.webp" alt="Oysters, cool grade" loading="lazy" decoding="async">
-  </figure>
-  <p class="mono a" style="--x:22%;--y:84%;opacity:.6">Fig. 06 — Ice, steel, silk. 06:10.</p>
 </section>
 
-<!-- 21 desert -->
-<section class="panel k keep shade" data-sec="city" style="--w:182;--sh:linear-gradient(0deg,rgba(10,9,9,.72),rgba(10,9,9,0) 48%)">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 55%;--mop:30% 50%" data-s=".05">
-    <img src="img/y_desert_n.webp" alt="Models dining on brocade cushions in the open desert at sunset, one feeding another with chopsticks" loading="lazy" decoding="async">
+<!-- 20 the edit -->
+<section class="panel k" data-sec="calm" style="--w:236">
+  <div class="a" style="--x:4%;--y:10%;--wd:34%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The edit</p>
+    <h2 class="disp t-l">Calm. Fire. <em>Calm.</em></h2>
+    <p class="body" style="margin-top:calc(var(--u)*2.6)">Long, still takes at the table. Bursts of a few frames in the kitchen. Every cut back to the table lands like a breath.</p>
+  </div>
+  <div class="a rhythm" style="--x:4%;--y:54%;--wd:92%;--ht:34%">
+    <figure class="t" style="flex:6"><div class="ph"><img src="img/k_r1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 06s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/k_r2.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/k_r3.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.3s</figcaption></figure>
+    <figure class="t" style="flex:5"><div class="ph"><img src="img/k_r4.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 05s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/k_r5.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure class="t" style="flex:7"><div class="ph"><img src="img/k_r6.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 07s</figcaption></figure>
+  </div>
+  <p class="mono a dsk" style="--x:4%;--y:50%;opacity:.55">Frame widths drawn to shot length</p>
+</section>
+
+<!-- 21 the kitchen -->
+<section class="panel k keep shade" data-sec="calm" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.72),rgba(10,9,9,0) 50%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:76% 40%" data-s=".05">
+    <img src="img/k_fire.webp" alt="A chef tossing a flaming wok, sparks and smoke, tilted handheld angle" loading="lazy" decoding="async">
   </figure>
   <div class="a tx dr" style="--x:4.5%;--b:8%;z-index:2" data-s="-.04">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">Location 02 — The desert</p>
-    <h2 class="disp it t-xl" style="line-height:.88">A dining room<br>with no walls.</h2>
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The kitchen</p>
+    <h2 class="disp it t-xl" style="line-height:.88">Nothing<br>stops.</h2>
   </div>
 </section>
 
-<!-- 22 souk -->
-<section class="panel bu" data-sec="city" style="--w:216">
+<!-- 22 kitchen inserts -->
+<section class="panel bu" data-sec="calm" style="--w:216">
   <div class="a" style="--x:4%;--y:10%;--wd:20%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Location 03 — The souk</p>
-    <h2 class="disp t-m">Tradition meets another <em>tradition.</em></h2>
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Kitchen inserts</p>
+    <h2 class="disp t-m">Violent camera. <em>Real chefs.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.7">No fashion in the kitchen. Only fire, steel and hands.</p>
   </div>
   <div class="a strips grid3" style="--x:27%;--y:0;--wd:69%;--ht:100%">
-    <figure class="ph a rv" style="--x:0;--y:8%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/y_souk1_n.webp" alt="Model in red brocade carrying a plate through the souk" loading="lazy" decoding="async"></figure>
-    <figure class="ph a rv" style="--x:35%;--y:14%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/y_souk2_n.webp" alt="Model in green suit carrying a plate, jade toned" loading="lazy" decoding="async"></figure>
-    <figure class="ph a rv" style="--x:70%;--y:4%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/y_souk3_n.webp" alt="Model in teal brocade eating with chopsticks in the souk" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:0;--y:8%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i1.webp" alt="Black and white: a cleaver blurring through spring onions and chillies" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:35%;--y:14%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i2.webp" alt="Red-toned: a chef's face lit by the flame" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:70%;--y:4%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i3.webp" alt="A chef working the line through steam" loading="lazy" decoding="async"></figure>
   </div>
-  <p class="mono a dsk" style="--x:27%;--y:88%;opacity:.65">Look 04</p>
-  <p class="mono a dsk" style="--x:51.15%;--y:94%;opacity:.65">Look 05</p>
-  <p class="mono a dsk" style="--x:75.3%;--y:84%;opacity:.65">Look 06</p>
+  <p class="mono a dsk" style="--x:27%;--y:88%;opacity:.65">Insert 01 — Steel</p>
+  <p class="mono a dsk" style="--x:51.15%;--y:94%;opacity:.65">Insert 02 — Fire</p>
+  <p class="mono a dsk" style="--x:75.3%;--y:84%;opacity:.65">Insert 03 — Steam</p>
 </section>
 
-<!-- 23 port -->
-<section class="panel k" data-sec="city" style="--w:182">
-  <figure class="ph a px bleed" style="--x:0;--y:0;--wd:62%;--ht:100%;--ar:4/5;--op:45% 50%" data-s=".05">
-    <img src="img/y_port_n.webp" alt="Model in red brocade eating with chopsticks beside a rusting fishing boat, cool neutral grade" loading="lazy" decoding="async">
+<!-- 23 the service -->
+<section class="panel k" data-sec="calm" style="--w:182">
+  <figure class="ph a px bleed" style="--x:0;--y:0;--wd:62%;--ht:100%;--ar:4/5;--op:52% 50%" data-s=".05">
+    <img src="img/k_slide.webp" alt="A plated dish sliding across the white tablecloth towards the couple, no one serving it" loading="lazy" decoding="async">
   </figure>
-  <figure class="ph a rv m-r" style="--x:66%;--y:9%;--wd:20%;--ht:56%;--ar:3/4;--op:50% 30%">
-    <img src="img/y_port_in_n.webp" alt="Model in teal brocade tasting at a table of seafood on the dock" loading="lazy" decoding="async">
+  <figure class="ph a rv m-r" style="--x:66%;--y:9%;--wd:20%;--ht:56%;--ar:3/4;--op:50% 40%">
+    <img src="img/k_slide_in.webp" alt="The woman in the red suit at the table, a glass of red wine beside her" loading="lazy" decoding="async">
   </figure>
-  <p class="mono a dsk" style="--x:87.5%;--y:9%"><span class="vt" style="display:inline-block">Fig. 09 — Dock, nets, 18:05</span></p>
+  <p class="mono a dsk" style="--x:87.5%;--y:9%"><span class="vt" style="display:inline-block">Fig. 14 — Plate in motion</span></p>
   <div class="a" style="--x:66%;--b:9%;--wd:30%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Location 04 — The port</p>
-    <h2 class="disp t-m">Luxury lands somewhere <em>unexpected.</em></h2>
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The service</p>
+    <h2 class="disp t-m">Dishes arrive. <em>No one brings them.</em></h2>
   </div>
 </section>
 
-<!-- 24 food -->
-<section class="panel iv grid2" data-sec="city" style="--w:232">
+<!-- 24 the dinner -->
+<section class="panel iv grid2" data-sec="calm" style="--w:232">
   <div class="a head" style="--x:4%;--y:10%;--wd:21%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The table</p>
-    <h2 class="disp t-l">The dishes travel with them.</h2>
-  </div>
-  <figure class="ph a rv" style="--x:28%;--y:8%;--wd:30%;--ht:40%;--ar:1/1"><img src="img/f_1_n.webp" alt="Oysters and lobster on ice" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:60%;--y:8%;--wd:16%;--ht:54%;--ar:1/1;--op:40% 50%"><img src="img/f_3_n.webp" alt="Chopsticks lifting lobster" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:78%;--y:16%;--wd:18%;--ht:32%;--ar:1/1"><img src="img/f_2_n.webp" alt="Plate carried in the souk" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:28%;--y:52%;--wd:20%;--ht:36%;--ar:1/1"><img src="img/f_5_n.webp" alt="Prawn dish held against teal brocade" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:50%;--y:66%;--wd:26%;--ht:22%;--ar:1/1"><img src="img/f_4_n.webp" alt="Seafood platter, burgundy toned" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:78%;--y:52%;--wd:18%;--ht:36%;--ar:1/1"><img src="img/f_6_n.webp" alt="Model tasting with chopsticks" loading="lazy" decoding="async"></figure>
-  <p class="mono a dsk" style="--x:4%;--b:9%">Plates · hands · chopsticks · fabric</p>
-</section>
-
-<!-- 25 choreography -->
-<section class="panel k" data-sec="city" style="--w:210">
-  <figure class="ph a px bleed" style="--x:4%;--y:10%;--wd:52%;--ht:80%;--ar:4/3;--op:45% 40%" data-s=".05">
-    <img src="img/y_feed_n.webp" alt="Model in red feeding a model in green with chopsticks, desert at dusk" loading="lazy" decoding="async">
-  </figure>
-  <figure class="ph a rv m-r" style="--x:47%;--y:56%;--wd:17%;--ht:32%;--ar:4/3;z-index:2">
-    <img src="img/y_feed_j_n.webp" alt="Jade-toned close-up of chopsticks reaching a mouth" loading="lazy" decoding="async">
-  </figure>
-  <div class="a" style="--x:69%;--y:12%;--wd:27%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Interaction</p>
-    <h2 class="disp t-l">Eating becomes choreography.</h2>
-    <ol class="counts" style="margin-top:calc(var(--u)*5)">
-      <li><b>1</b>Feeding.</li>
-      <li><b>2</b>Passing.</li>
-      <li><b>3</b>Holding.</li>
-      <li><b>4</b>Sharing.</li>
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The dinner</p>
+    <h2 class="disp t-m">A dinner, choreographed.</h2>
+    <ol class="counts" style="margin-top:calc(var(--u)*4)">
+      <li><b>1</b>The look.</li>
+      <li><b>2</b>The plate.</li>
+      <li><b>3</b>The taste.</li>
+      <li><b>4</b>The silence.</li>
     </ol>
   </div>
+  <figure class="ph a rv" style="--x:28%;--y:8%;--wd:30%;--ht:40%;--ar:1/1"><img src="img/k_ch4.webp" alt="The plated dish on dragon porcelain" loading="lazy" decoding="async"></figure>
+  <figure class="ph a rv" style="--x:60%;--y:8%;--wd:16%;--ht:54%;--ar:1/1"><img src="img/k_ch3.webp" alt="A glass of red wine in the dark" loading="lazy" decoding="async"></figure>
+  <figure class="ph a rv" style="--x:78%;--y:16%;--wd:18%;--ht:32%;--ar:1/1"><img src="img/k_ch1.webp" alt="A hand in a red sleeve resting on the tablecloth" loading="lazy" decoding="async"></figure>
+  <figure class="ph a rv" style="--x:28%;--y:52%;--wd:20%;--ht:36%;--ar:1/1"><img src="img/k_ch2.webp" alt="Black and white: a linen cuff and hand at the table" loading="lazy" decoding="async"></figure>
+  <figure class="ph a rv" style="--x:50%;--y:66%;--wd:26%;--ht:22%;--ar:1/1"><img src="img/k_ch5.webp" alt="A porcelain teacup" loading="lazy" decoding="async"></figure>
+  <figure class="ph a rv" style="--x:78%;--y:52%;--wd:18%;--ht:36%;--ar:1/1"><img src="img/k_ch6.webp" alt="Candles, glasses and porcelain at the centre of the table" loading="lazy" decoding="async"></figure>
+  <p class="mono a dsk" style="--x:4%;--b:9%">Two models. No one else in frame.</p>
+</section>
+
+<!-- 25 the door -->
+<section class="panel k keep shade" data-sec="calm" style="--w:180;--sh:linear-gradient(0deg,rgba(10,9,9,.75),rgba(10,9,9,0) 48%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:50% 40%" data-s=".05">
+    <img src="img/k_bridge.webp" alt="From inside the burning kitchen, the spotlit couple seen through the window of the swing door" loading="lazy" decoding="async">
+  </figure>
+  <div class="a tx" style="--x:4.5%;--b:8%;--wd:62%;z-index:2">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The door</p>
+    <h2 class="disp t-l">Two worlds. <em>One door.</em></h2>
+  </div>
+  <p class="mono a dsk" style="--r:4%;--b:9%;z-index:2;opacity:.75">Chaos in front. Calm beyond.</p>
 </section>
 
 <!-- 26 treatment 02 -->
-<section class="panel ja" data-sec="city" style="--w:234">
+<section class="panel ja" data-sec="calm" style="--w:234">
   <div class="a" style="--x:4%;--y:9%">
     <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment — Direction 02</p>
-    <h2 class="disp t-l">The City,<br><em>on film.</em></h2>
+    <h2 class="disp t-l">Calm &amp; Fire,<br><em>on film.</em></h2>
   </div>
-  <div class="a cols" style="--x:4%;--y:44%;--wd:52%;grid-template-columns:repeat(4,1fr)">
-    <div class="col"><h3>Camera</h3><p>Composed like fashion photography.<br><em>Wide tableaux, intimate detail.</em></p></div>
-    <div class="col"><h3>Light</h3><p>Natural location light,<br><em>elevated by fashion lighting.</em></p></div>
-    <div class="col"><h3>Movement</h3><p>Slow. Confident.<br><em>Almost surreal.</em></p></div>
-    <div class="col"><h3>Locations</h3><p>Recognisably Abu Dhabi.<br><em>Never tourism advertising.</em></p></div>
+  <div class="a cols" style="--x:4%;--y:42%;--wd:52%;grid-template-columns:repeat(4,1fr)">
+    <div class="col"><h3>Camera</h3><p>Table: locked off, symmetrical.<br><em>Kitchen: handheld, whip pans, crash zooms.</em></p></div>
+    <div class="col"><h3>Light</h3><p>Table: one hard spotlight.<br><em>Kitchen: fire, chrome, steam.</em></p></div>
+    <div class="col"><h3>Sound</h3><p>Table: near silence.<br><em>Kitchen: sizzle, metal, orders.</em></p></div>
+    <div class="col"><h3>Cast</h3><p>Two models at the table.<br><em>Real chefs in the kitchen.</em></p></div>
   </div>
-  <p class="mono a" style="--x:4%;--b:9%;--wd:50%;opacity:.7">No skyline montage. The locations are backdrops for fashion and attitude.</p>
+  <p class="mono a" style="--x:4%;--b:9%;--wd:50%;opacity:.7">One location. One shoot day. Inside the restaurant.</p>
   <div class="a" style="--x:60%;--y:9%;--wd:36%;--ht:80%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*1.6)">Location index</p>
+    <p class="cap" style="margin-bottom:calc(var(--u)*1.6)">The film in five shots</p>
     <div class="locs" style="display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*.8);height:calc(100% - var(--u)*4)">
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:30% 50%;--ar:1/3"><img src="img/y_market_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Fish market</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:72% 50%;--ar:1/3"><img src="img/y_desert_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Desert</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--ar:1/3"><img src="img/y_souk3_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Souk</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:30% 50%;--ar:1/3"><img src="img/y_port_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Port</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:60% 50%;--ar:1/3"><img src="img/y_premise_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Waterfront</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:28% 60%;--ar:1/3"><img src="img/k_hero.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The table</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:30% 50%;--ar:1/3"><img src="img/k_fire.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Fire</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:54% 50%;--ar:1/3"><img src="img/k_slide.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The plate</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--ar:1/3"><img src="img/k_i1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Steel</figcaption></figure>
+      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:56% 50%;--ar:1/3"><img src="img/k_bridge.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The door</figcaption></figure>
     </div>
   </div>
 </section>
@@ -634,19 +639,19 @@ html:not(.h) .cjk.a{display:none}
     </div>
   </div>
   <div class="half a" style="--x:50%;--y:0;--wd:50%;--ht:100%">
-    <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.8" data-s=".04"><img src="img/e_city_n.webp" alt="Jade-toned desert dining scene" loading="lazy" decoding="async"></figure>
+    <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.8" data-s=".04"><img src="img/k_end.webp" alt="Jade-toned spotlit table for two in the empty restaurant" loading="lazy" decoding="async"></figure>
     <div class="a" style="--x:9%;--b:11%;--wd:80%">
       <p class="mono" style="color:var(--gold);margin-bottom:calc(var(--u)*1.6)">02</p>
-      <h2 class="disp t-l">The City</h2>
-      <p class="cap" style="margin-top:calc(var(--u)*2.2);color:var(--ivory)">Shanghai Tang goes out into Abu Dhabi.</p>
-      <div class="words"><span>Unexpected.</span><span>Graphic.</span><span>Iconic.</span><span>Expansive.</span><span>Surreal.</span></div>
+      <h2 class="disp t-l">Calm &amp; Fire</h2>
+      <p class="cap" style="margin-top:calc(var(--u)*2.2);color:var(--ivory)">Two guests. One table. A kitchen on fire.</p>
+      <div class="words"><span>Still.</span><span>Intimate.</span><span>Silent.</span><span>Violent.</span><span>Cinematic.</span></div>
     </div>
   </div>
 </section>
 
 <section class="panel k vw keep shade" data-sec="fin" style="--sh:linear-gradient(90deg,rgba(10,9,9,.85),rgba(10,9,9,.35))">
   <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 35%;--mop:38% 40%" data-s=".04">
-    <img src="img/e_final_n.webp" alt="Black and white: three models walking through the souk carrying plates" loading="lazy" decoding="async">
+    <img src="img/k_final.webp" alt="Black and white: the burning kitchen with the spotlit table seen through the door" loading="lazy" decoding="async">
   </figure>
   <div class="a tx top" style="--x:6%;--y:17%;--wd:80%;z-index:2">
     <h2 class="disp t-xl" style="line-height:.9">Two directions.<br><em>One Shanghai Tang world.</em></h2>
@@ -676,8 +681,8 @@ html:not(.h) .cjk.a{display:none}
   const navLinks = [...document.querySelectorAll('.mast nav a')];
   const mq = matchMedia('(min-width: 900px) and (min-aspect-ratio: 1/1)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const SECTIONS = { intro: 'Intro', cooking: '01 — Shanghai Cooking', or: 'Interval', city: '02 — The City', fin: 'Two directions' };
-  const NAVSEC = { intro: 'intro', cooking: 'cooking', or: 'cooking', city: 'city', fin: 'city' };
+  const SECTIONS = { intro: 'Intro', cooking: '01 — Shanghai Cooking', or: 'Interval', calm: '02 — Calm & Fire', fin: 'Two directions' };
+  const NAVSEC = { intro: 'intro', cooking: 'cooking', or: 'cooking', calm: 'calm', fin: 'calm' };
   const pad = n => String(n).padStart(2, '0');
 
   let H = false, cur = 0, tgt = 0, max = 0, vw = innerWidth, vh = innerHeight;
@@ -746,7 +751,7 @@ html:not(.h) .cjk.a{display:none}
       t.className = 'tick'; t.dataset.sec = s;
       t.style.left = (max ? Math.min(1, p._x / max) * 100 : 0) + '%';
       const b = document.createElement('b');
-      b.textContent = { intro: 'Intro', cooking: '01 Cooking', or: 'Or', city: '02 City', fin: 'Fin' }[s];
+      b.textContent = { intro: 'Intro', cooking: '01 Cooking', or: 'Or', calm: '02 Calm & Fire', fin: 'Fin' }[s];
       t.appendChild(b);
       if (s === 'fin') { b.style.left = 'auto'; b.style.right = '0'; }
       ticksEl.appendChild(t);
