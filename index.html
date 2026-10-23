@@ -1,5 +1,5 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
-<title>Shanghai Tang Opening Film</title>
+<title>Shanghai Cooking Treatment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -122,6 +122,14 @@ html:not(.h) .credit{bottom:calc(env(safe-area-inset-bottom,0px) + 12px);font-si
 
 .back{background:none;border:0;color:inherit;cursor:pointer;font:500 11px/1 var(--f-sans);letter-spacing:.22em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid currentColor}
 .dsk{display:none}
+.chap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 calc(var(--u)*4)}
+.chap a{display:grid;grid-template-columns:calc(var(--u)*5) 1fr auto;align-items:baseline;gap:calc(var(--u)*1.4);text-decoration:none;padding:calc(var(--u)*1.8) 0;border-bottom:1px solid rgba(241,232,216,.2)}
+.chap b{font:400 max(10px,calc(var(--u)*1.1))/1 var(--f-mono);color:var(--gold);letter-spacing:.1em}
+.chap span{font-family:var(--f-disp);font-style:italic;font-size:max(18px,calc(var(--u)*2.6))}
+.chap i{font:normal 400 max(10px,calc(var(--u)*1.1))/1 var(--f-mono);letter-spacing:.1em;opacity:.6}
+.chap a:hover span{color:#d33a45}
+.chap a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
+html:not(.h) .chap{grid-template-columns:1fr}
 .rhythm{display:flex;gap:calc(var(--u)*.6)}
 .rhythm figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0;height:100%}
 .rhythm .ph{flex:1;min-height:0}
@@ -189,8 +197,8 @@ html:not(.h) .cjk.a{display:none}
   <div class="brand">Shanghai Tang <span>上海灘</span></div>
   <nav aria-label="Sections">
     <a href="#intro" data-go="intro">Intro</a>
-    <a href="#cooking" data-go="cooking">01 Cooking</a>
-    <a href="#calm" data-go="calm">02 Calm &amp; Fire</a>
+    <a href="#cooking" data-go="cooking">Shanghai Cooking</a>
+    <a href="#treatment" data-go="treatment">The Film</a>
   </nav>
 </header>
 
@@ -274,21 +282,23 @@ html:not(.h) .cjk.a{display:none}
 
 <!-- 05 contents -->
 <section class="panel k" data-sec="intro" style="--w:132">
-  <p class="cap a" style="--x:6%;--y:11%">Contents — Two directions</p>
-  <div class="toc a" style="--x:6%;--y:22%;--wd:88%">
+  <p class="cap a" style="--x:6%;--y:11%">Contents — The direction</p>
+  <div class="toc a" style="--x:6%;--y:20%;--wd:88%">
     <a href="#cooking" data-go="cooking">
       <span class="n">01</span>
       <span class="ti"><span class="disp t-l">Shanghai Cooking</span><span class="disp it t-s" style="opacity:.75">Fashion enters the kitchen.</span></span>
       <span class="pg" data-page="cooking">p. 06</span>
       <span class="ph"><img src="img/idx_fire_n.webp" alt="" loading="lazy" decoding="async" style="--op:50% 60%"></span>
     </a>
-    <a href="#calm" data-go="calm">
-      <span class="n">02</span>
-      <span class="ti"><span class="disp t-l">Calm &amp; Fire</span><span class="disp it t-s" style="opacity:.75">Dinner for two. A kitchen on fire.</span></span>
-      <span class="pg" data-page="calm">p. 17</span>
-      <span class="ph"><img src="img/k_idx.webp" alt="" loading="lazy" decoding="async" style="--op:50% 50%"></span>
-    </a>
   </div>
+  <ol class="chap a" style="--x:6%;--y:58%;--wd:88%">
+    <li><a href="#idea" data-go="idea"><b>i</b><span>The idea</span><i data-page="idea">p. 07</i></a></li>
+    <li><a href="#studio" data-go="studio"><b>ii</b><span>The set</span><i data-page="studio">p. 08</i></a></li>
+    <li><a href="#action" data-go="action"><b>iii</b><span>The action</span><i data-page="action">p. 09</i></a></li>
+    <li><a href="#crew" data-go="crew"><b>iv</b><span>The crew</span><i data-page="crew">p. 11</i></a></li>
+    <li><a href="#cast" data-go="cast"><b>v</b><span>The cast</span><i data-page="cast">p. 12</i></a></li>
+    <li><a href="#treatment" data-go="treatment"><b>vi</b><span>The film</span><i data-page="treatment">p. 14</i></a></li>
+  </ol>
 </section>
 
 <!-- ============ DIRECTION 01 ============ -->
@@ -297,7 +307,7 @@ html:not(.h) .cjk.a{display:none}
 <section class="panel k" id="cooking" data-sec="cooking" style="--w:152">
   <h2 class="mask a" style="--x:2%;--y:4%;font-size:calc(var(--u)*80);--img:url(img/c_title_n.webp);--bp:50% 40%" aria-label="01">01</h2>
   <div class="a" style="--x:61%;--y:28%;--wd:34%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2.4)">Direction 01 of 02</p>
+    <p class="cap" style="margin-bottom:calc(var(--u)*2.4)">The creative direction</p>
     <h2 class="disp t-xl" style="line-height:.86">Shanghai<br>Cooking</h2>
     <p class="disp it t-s" style="margin-top:calc(var(--u)*3)">Fashion enters the kitchen.</p>
   </div>
@@ -305,7 +315,7 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 07 idea -->
-<section class="panel iv" data-sec="cooking" style="--w:124">
+<section class="panel iv" id="idea" data-sec="cooking" style="--w:124">
   <p class="cap a" style="--x:10%;--y:14%">The idea</p>
   <div class="a" style="--x:10%;--y:24%;--wd:78%;display:grid;gap:calc(var(--u)*3.2)">
     <p class="disp t-m">The restaurant becomes the set.</p>
@@ -316,7 +326,7 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 08 kitchen becomes studio -->
-<section class="panel k" data-sec="cooking" style="--w:205">
+<section class="panel k" id="studio" data-sec="cooking" style="--w:205">
   <p class="mono a" style="--x:4%;--y:7%;opacity:.6">TC 01:00:12:04 &nbsp;—&nbsp; SC. 1 &nbsp;—&nbsp; KITCHEN / WIDE</p>
   <figure class="ph a px rv bleed" style="--x:0;--y:11%;--wd:100%;--ht:70%;--ar:16/10;--op:50% 45%" data-s=".05">
     <img src="img/c_kitchen_n.webp" alt="Wide backstage view: models cooking at the wok and chopping while a stylist fixes hair and a camera operator films" loading="lazy" decoding="async">
@@ -326,7 +336,7 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 09 they cook -->
-<section class="panel k keep shade" data-sec="cooking" style="--w:168;--sh:linear-gradient(90deg,rgba(10,9,9,.55),rgba(10,9,9,0) 45%),linear-gradient(0deg,rgba(10,9,9,.5),rgba(10,9,9,0) 35%)">
+<section class="panel k keep shade" id="action" data-sec="cooking" style="--w:168;--sh:linear-gradient(90deg,rgba(10,9,9,.55),rgba(10,9,9,0) 45%),linear-gradient(0deg,rgba(10,9,9,.5),rgba(10,9,9,0) 35%)">
   <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 0%;--mop:42% 50%" data-s=".05">
     <img src="img/c_wok_n.webp" alt="Model in a red qipao working a flaming wok, chillies in the air" loading="lazy" decoding="async">
   </figure>
@@ -360,7 +370,7 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 11 crew -->
-<section class="panel k" data-sec="cooking" style="--w:222">
+<section class="panel k" id="crew" data-sec="cooking" style="--w:222">
   <figure class="ph a px bleed" style="--x:0;--y:0;--wd:52%;--ht:100%;--ar:4/5;--op:30% 50%" data-s=".05">
     <img src="img/c_crew_n.webp" alt="Black and white: camera operator and stylist at work beside the chopping station" loading="lazy" decoding="async">
   </figure>
@@ -379,7 +389,7 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 12 roles -->
-<section class="panel iv" data-sec="cooking" style="--w:202">
+<section class="panel iv" id="cast" data-sec="cooking" style="--w:202">
   <div class="a" style="--x:5%;--y:10%;--wd:27%">
     <p class="cap" style="margin-bottom:calc(var(--u)*2)">Cast</p>
     <h2 class="disp t-l">Everyone performs a role.</h2>
@@ -421,9 +431,9 @@ html:not(.h) .cjk.a{display:none}
 </section>
 
 <!-- 14 treatment 01 -->
-<section class="panel k" data-sec="cooking" style="--w:236">
+<section class="panel k" id="treatment" data-sec="film" style="--w:236">
   <div class="a" style="--x:4%;--y:9%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment — Direction 01</p>
+    <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment</p>
     <h2 class="disp t-l">Shanghai Cooking,<br><em>on film.</em></h2>
   </div>
   <div class="a cols" style="--x:4%;--y:44%;--wd:50%;grid-template-columns:repeat(3,1fr)">
@@ -447,214 +457,14 @@ html:not(.h) .cjk.a{display:none}
   </div>
 </section>
 
-<!-- ============ TRANSITION ============ -->
-
-<section class="panel bu" data-sec="or" id="or" style="--w:112">
-  <p class="cap a" style="--x:10%;--y:12%">Interval</p>
-  <h2 class="disp it a dr" style="--x:8%;--y:20%;font-size:max(120px,calc(var(--u)*40));line-height:.9" data-s="-.05">Or…</h2>
-  <p class="mono a" style="--x:10%;--b:11%;opacity:.6">Direction 02 follows</p>
-</section>
-
-<section class="panel iv" data-sec="or" style="--w:156">
-  <h2 class="disp t-l a" style="--x:8%;--y:20%;--wd:58%">What if the whole restaurant existed for <em class="rd">only two people?</em></h2>
-  <figure class="ph a rv px m-r" style="--r:0;--y:0;--wd:22%;--ht:100%;--ar:3/4" data-s=".05">
-    <img src="img/k_sliver.webp" alt="Sliver of the spotlit table: a woman in a red suit seated at dinner" loading="lazy" decoding="async">
-  </figure>
-</section>
-
-<!-- ============ DIRECTION 02 ============ -->
-
-<!-- 17 title -->
-<section class="panel ja" id="calm" data-sec="calm" style="--w:174">
-  <h2 class="mask a" style="--x:2%;--y:4%;font-size:calc(var(--u)*80);--img:url(img/k_mask.webp);--bp:45% 50%" aria-label="02">02</h2>
-  <div class="a" style="--x:56%;--y:28%;--wd:21%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2.4)">Direction 02 of 02</p>
-    <h2 class="disp t-xl" style="line-height:.86">Calm<br><em>&amp; Fire</em></h2>
-    <p class="disp it t-s" style="margin-top:calc(var(--u)*3)">At the table, nothing moves. In the kitchen, nothing stops.</p>
-  </div>
-  <figure class="ph a rv m-r" style="--r:3.5%;--y:10%;--wd:17%;--ht:80%;--ar:3/4">
-    <img src="img/k_tstrip.webp" alt="Model in a beige linen suit seated at the spotlit table" loading="lazy" decoding="async">
-  </figure>
-  <div class="cjk a" style="--x:77.4%;--y:10%;opacity:.75" aria-hidden="true">靜 · 火</div>
-</section>
-
-<!-- 18 premise -->
-<section class="panel k" data-sec="calm" style="--w:204">
-  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">An empty dining room. One table. Nothing else exists.</p>
-  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 62%" data-s=".05">
-    <img src="img/k_hero.webp" alt="Empty dark restaurant with one spotlit table for two: a woman in a red suit and a man in a beige suit" loading="lazy" decoding="async">
-  </figure>
-  <h2 class="disp t-l a" style="--x:4%;--b:5%">The restaurant, for two.</h2>
-</section>
-
-<!-- 19 two speeds -->
-<section class="panel iv" data-sec="calm" style="--w:212">
-  <p class="cap a" style="--x:4%;--y:8%">Two speeds</p>
-  <figure class="ph a rv m-l" style="--x:4%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
-    <img src="img/k_calm.webp" alt="Black and white: the woman in the suit seated at the spotlit table, perfectly still" loading="lazy" decoding="async">
-  </figure>
-  <div class="a" style="--x:30.5%;--y:58%;--wd:17%">
-    <h2 class="disp it t-xl">Calm.</h2>
-    <p class="mono" style="margin-top:calc(var(--u)*1.6)">Locked off. Long takes. Silence.</p>
-  </div>
-  <div class="a dsk" style="--x:50%;--y:14%;--wd:1px;--ht:76%;background:currentColor;opacity:.25"></div>
-  <div class="a" style="--x:53%;--y:14%;--wd:17%">
-    <h2 class="disp it t-xl rd">Fire.</h2>
-    <p class="mono" style="margin-top:calc(var(--u)*1.6)">Handheld. A few frames per cut. Noise.</p>
-  </div>
-  <figure class="ph a rv m-r" style="--x:72%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
-    <img src="img/k_firetall.webp" alt="Flames exploding from a wok in a professional kitchen" loading="lazy" decoding="async">
-  </figure>
-</section>
-
-<!-- 20 the edit -->
-<section class="panel k" data-sec="calm" style="--w:236">
-  <div class="a" style="--x:4%;--y:10%;--wd:34%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The edit</p>
-    <h2 class="disp t-l">Calm. Fire. <em>Calm.</em></h2>
-    <p class="body" style="margin-top:calc(var(--u)*2.6)">Long, still takes at the table. Bursts of a few frames in the kitchen. Every cut back to the table lands like a breath.</p>
-  </div>
-  <div class="a rhythm" style="--x:4%;--y:54%;--wd:92%;--ht:34%">
-    <figure class="t" style="flex:6"><div class="ph"><img src="img/k_r1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 06s</figcaption></figure>
-    <figure style="flex:1.1"><div class="ph"><img src="img/k_r2.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
-    <figure style="flex:1.1"><div class="ph"><img src="img/k_r3.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.3s</figcaption></figure>
-    <figure class="t" style="flex:5"><div class="ph"><img src="img/k_r4.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 05s</figcaption></figure>
-    <figure style="flex:1.1"><div class="ph"><img src="img/k_r5.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
-    <figure class="t" style="flex:7"><div class="ph"><img src="img/k_r6.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Table — 07s</figcaption></figure>
-  </div>
-  <p class="mono a dsk" style="--x:4%;--y:50%;opacity:.55">Frame widths drawn to shot length</p>
-</section>
-
-<!-- 21 the kitchen -->
-<section class="panel k keep shade" data-sec="calm" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.72),rgba(10,9,9,0) 50%)">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:76% 40%" data-s=".05">
-    <img src="img/k_fire.webp" alt="A chef tossing a flaming wok, sparks and smoke, tilted handheld angle" loading="lazy" decoding="async">
-  </figure>
-  <div class="a tx dr" style="--x:4.5%;--b:8%;z-index:2" data-s="-.04">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The kitchen</p>
-    <h2 class="disp it t-xl" style="line-height:.88">Nothing<br>stops.</h2>
-  </div>
-</section>
-
-<!-- 22 kitchen inserts -->
-<section class="panel bu" data-sec="calm" style="--w:216">
-  <div class="a" style="--x:4%;--y:10%;--wd:20%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Kitchen inserts</p>
-    <h2 class="disp t-m">Violent camera. <em>Real chefs.</em></h2>
-    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.7">No fashion in the kitchen. Only fire, steel and hands.</p>
-  </div>
-  <div class="a strips grid3" style="--x:27%;--y:0;--wd:69%;--ht:100%">
-    <figure class="ph a rv" style="--x:0;--y:8%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i1.webp" alt="Black and white: a cleaver blurring through spring onions and chillies" loading="lazy" decoding="async"></figure>
-    <figure class="ph a rv" style="--x:35%;--y:14%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i2.webp" alt="Red-toned: a chef's face lit by the flame" loading="lazy" decoding="async"></figure>
-    <figure class="ph a rv" style="--x:70%;--y:4%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/k_i3.webp" alt="A chef working the line through steam" loading="lazy" decoding="async"></figure>
-  </div>
-  <p class="mono a dsk" style="--x:27%;--y:88%;opacity:.65">Insert 01 — Steel</p>
-  <p class="mono a dsk" style="--x:51.15%;--y:94%;opacity:.65">Insert 02 — Fire</p>
-  <p class="mono a dsk" style="--x:75.3%;--y:84%;opacity:.65">Insert 03 — Steam</p>
-</section>
-
-<!-- 23 the service -->
-<section class="panel k" data-sec="calm" style="--w:182">
-  <figure class="ph a px bleed" style="--x:0;--y:0;--wd:62%;--ht:100%;--ar:4/5;--op:52% 50%" data-s=".05">
-    <img src="img/k_slide.webp" alt="A plated dish sliding across the white tablecloth towards the couple, no one serving it" loading="lazy" decoding="async">
-  </figure>
-  <figure class="ph a rv m-r" style="--x:66%;--y:9%;--wd:20%;--ht:56%;--ar:3/4;--op:50% 40%">
-    <img src="img/k_slide_in.webp" alt="The woman in the red suit at the table, a glass of red wine beside her" loading="lazy" decoding="async">
-  </figure>
-  <p class="mono a dsk" style="--x:87.5%;--y:9%"><span class="vt" style="display:inline-block">Fig. 14 — Plate in motion</span></p>
-  <div class="a" style="--x:66%;--b:9%;--wd:30%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The service</p>
-    <h2 class="disp t-m">Dishes arrive. <em>No one brings them.</em></h2>
-  </div>
-</section>
-
-<!-- 24 the dinner -->
-<section class="panel iv grid2" data-sec="calm" style="--w:232">
-  <div class="a head" style="--x:4%;--y:10%;--wd:21%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The dinner</p>
-    <h2 class="disp t-m">A dinner, choreographed.</h2>
-    <ol class="counts" style="margin-top:calc(var(--u)*4)">
-      <li><b>1</b>The look.</li>
-      <li><b>2</b>The plate.</li>
-      <li><b>3</b>The taste.</li>
-      <li><b>4</b>The silence.</li>
-    </ol>
-  </div>
-  <figure class="ph a rv" style="--x:28%;--y:8%;--wd:30%;--ht:40%;--ar:1/1"><img src="img/k_ch4.webp" alt="The plated dish on dragon porcelain" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:60%;--y:8%;--wd:16%;--ht:54%;--ar:1/1"><img src="img/k_ch3.webp" alt="A glass of red wine in the dark" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:78%;--y:16%;--wd:18%;--ht:32%;--ar:1/1"><img src="img/k_ch1.webp" alt="A hand in a red sleeve resting on the tablecloth" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:28%;--y:52%;--wd:20%;--ht:36%;--ar:1/1"><img src="img/k_ch2.webp" alt="Black and white: a linen cuff and hand at the table" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:50%;--y:66%;--wd:26%;--ht:22%;--ar:1/1"><img src="img/k_ch5.webp" alt="A porcelain teacup" loading="lazy" decoding="async"></figure>
-  <figure class="ph a rv" style="--x:78%;--y:52%;--wd:18%;--ht:36%;--ar:1/1"><img src="img/k_ch6.webp" alt="Candles, glasses and porcelain at the centre of the table" loading="lazy" decoding="async"></figure>
-  <p class="mono a dsk" style="--x:4%;--b:9%">Two models. No one else in frame.</p>
-</section>
-
-<!-- 25 the door -->
-<section class="panel k keep shade" data-sec="calm" style="--w:180;--sh:linear-gradient(0deg,rgba(10,9,9,.75),rgba(10,9,9,0) 48%)">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:50% 40%" data-s=".05">
-    <img src="img/k_bridge.webp" alt="From inside the burning kitchen, the spotlit couple seen through the window of the swing door" loading="lazy" decoding="async">
-  </figure>
-  <div class="a tx" style="--x:4.5%;--b:8%;--wd:62%;z-index:2">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The door</p>
-    <h2 class="disp t-l">Two worlds. <em>One door.</em></h2>
-  </div>
-  <p class="mono a dsk" style="--r:4%;--b:9%;z-index:2;opacity:.75">Chaos in front. Calm beyond.</p>
-</section>
-
-<!-- 26 treatment 02 -->
-<section class="panel ja" data-sec="calm" style="--w:234">
-  <div class="a" style="--x:4%;--y:9%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment — Direction 02</p>
-    <h2 class="disp t-l">Calm &amp; Fire,<br><em>on film.</em></h2>
-  </div>
-  <div class="a cols" style="--x:4%;--y:42%;--wd:52%;grid-template-columns:repeat(4,1fr)">
-    <div class="col"><h3>Camera</h3><p>Table: locked off, symmetrical.<br><em>Kitchen: handheld, whip pans, crash zooms.</em></p></div>
-    <div class="col"><h3>Light</h3><p>Table: one hard spotlight.<br><em>Kitchen: fire, chrome, steam.</em></p></div>
-    <div class="col"><h3>Sound</h3><p>Table: near silence.<br><em>Kitchen: sizzle, metal, orders.</em></p></div>
-    <div class="col"><h3>Cast</h3><p>Two models at the table.<br><em>Real chefs in the kitchen.</em></p></div>
-  </div>
-  <p class="mono a" style="--x:4%;--b:9%;--wd:50%;opacity:.7">One location. One shoot day. Inside the restaurant.</p>
-  <div class="a" style="--x:60%;--y:9%;--wd:36%;--ht:80%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*1.6)">The film in five shots</p>
-    <div class="locs" style="display:grid;grid-template-columns:repeat(5,1fr);gap:calc(var(--u)*.8);height:calc(100% - var(--u)*4)">
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:28% 60%;--ar:1/3"><img src="img/k_hero.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The table</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:30% 50%;--ar:1/3"><img src="img/k_fire.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Fire</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:54% 50%;--ar:1/3"><img src="img/k_slide.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The plate</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--ar:1/3"><img src="img/k_i1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Steel</figcaption></figure>
-      <figure style="margin:0;display:flex;flex-direction:column;gap:6px"><div class="ph" style="flex:1;--op:56% 50%;--ar:1/3"><img src="img/k_bridge.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">The door</figcaption></figure>
-    </div>
-  </div>
-</section>
-
 <!-- ============ END ============ -->
 
-<section class="panel k split" id="fin" data-sec="fin" style="--w:236">
-  <div class="half a" style="--x:0;--y:0;--wd:50%;--ht:100%">
-    <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.78" data-s=".04"><img src="img/e_cook_n.webp" alt="Red-toned kitchen backstage" loading="lazy" decoding="async"></figure>
-    <div class="a" style="--x:9%;--b:11%;--wd:80%">
-      <p class="mono" style="color:var(--gold);margin-bottom:calc(var(--u)*1.6)">01</p>
-      <h2 class="disp t-l">Shanghai Cooking</h2>
-      <p class="cap" style="margin-top:calc(var(--u)*2.2);color:var(--ivory)">The world comes into the kitchen.</p>
-      <div class="words"><span>Backstage.</span><span>Controlled.</span><span>Intimate.</span><span>Chaotic.</span><span>Sensual.</span></div>
-    </div>
-  </div>
-  <div class="half a" style="--x:50%;--y:0;--wd:50%;--ht:100%">
-    <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.8" data-s=".04"><img src="img/k_end.webp" alt="Jade-toned spotlit table for two in the empty restaurant" loading="lazy" decoding="async"></figure>
-    <div class="a" style="--x:9%;--b:11%;--wd:80%">
-      <p class="mono" style="color:var(--gold);margin-bottom:calc(var(--u)*1.6)">02</p>
-      <h2 class="disp t-l">Calm &amp; Fire</h2>
-      <p class="cap" style="margin-top:calc(var(--u)*2.2);color:var(--ivory)">Two guests. One table. A kitchen on fire.</p>
-      <div class="words"><span>Still.</span><span>Intimate.</span><span>Silent.</span><span>Violent.</span><span>Cinematic.</span></div>
-    </div>
-  </div>
-</section>
-
-<section class="panel k vw keep shade" data-sec="fin" style="--sh:linear-gradient(90deg,rgba(10,9,9,.85),rgba(10,9,9,.35))">
+<section class="panel k vw keep shade" id="fin" data-sec="fin" style="--sh:linear-gradient(90deg,rgba(10,9,9,.85),rgba(10,9,9,.35))">
   <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 35%;--mop:38% 40%" data-s=".04">
-    <img src="img/k_final.webp" alt="Black and white: the burning kitchen with the spotlit table seen through the door" loading="lazy" decoding="async">
+    <img src="img/e_final1_n.webp" alt="Black and white: the backstage kitchen shoot, models at the wok and the pass, camera and monitor in the foreground" loading="lazy" decoding="async">
   </figure>
   <div class="a tx top" style="--x:6%;--y:17%;--wd:80%;z-index:2">
-    <h2 class="disp t-xl" style="line-height:.9">Two directions.<br><em>One Shanghai Tang world.</em></h2>
+    <h2 class="disp t-xl" style="line-height:.9">Shanghai Cooking.<br><em>Fashion enters the kitchen.</em></h2>
   </div>
   <div class="a tx" style="--x:6%;--b:12%;z-index:2">
     <p class="disp it t-s" style="margin-bottom:calc(var(--u)*3)">Fashion first. Food always.</p>
@@ -681,8 +491,8 @@ html:not(.h) .cjk.a{display:none}
   const navLinks = [...document.querySelectorAll('.mast nav a')];
   const mq = matchMedia('(min-width: 900px) and (min-aspect-ratio: 1/1)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const SECTIONS = { intro: 'Intro', cooking: '01 — Shanghai Cooking', or: 'Interval', calm: '02 — Calm & Fire', fin: 'Two directions' };
-  const NAVSEC = { intro: 'intro', cooking: 'cooking', or: 'cooking', calm: 'calm', fin: 'calm' };
+  const SECTIONS = { intro: 'Intro', cooking: 'Shanghai Cooking', film: 'The film', fin: 'Fin' };
+  const NAVSEC = { intro: 'intro', cooking: 'cooking', film: 'treatment', fin: 'treatment' };
   const pad = n => String(n).padStart(2, '0');
 
   let H = false, cur = 0, tgt = 0, max = 0, vw = innerWidth, vh = innerHeight;
@@ -751,7 +561,7 @@ html:not(.h) .cjk.a{display:none}
       t.className = 'tick'; t.dataset.sec = s;
       t.style.left = (max ? Math.min(1, p._x / max) * 100 : 0) + '%';
       const b = document.createElement('b');
-      b.textContent = { intro: 'Intro', cooking: '01 Cooking', or: 'Or', calm: '02 Calm & Fire', fin: 'Fin' }[s];
+      b.textContent = { intro: 'Intro', cooking: 'Shanghai Cooking', film: 'The film', fin: 'Fin' }[s];
       t.appendChild(b);
       if (s === 'fin') { b.style.left = 'auto'; b.style.right = '0'; }
       ticksEl.appendChild(t);
