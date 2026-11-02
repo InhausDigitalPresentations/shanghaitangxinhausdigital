@@ -1,10 +1,10 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
-<title>Shanghai Cooking Treatment</title>
+<title>Dressed for Dinner Treatment</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&text=%E4%B8%8A%E6%B5%B7%E7%81%98%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%BB%9A%E6%88%BF%E5%9F%8E%E5%B8%82%C2%B7%E9%9D%9C%E7%81%AB&display=swap">
-<link rel="preload" as="image" href="img/cover_n.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&text=%E4%B8%8A%E6%B5%B7%E7%81%98%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%BB%9A%E6%88%BF%E5%9F%8E%E5%B8%82%C2%B7%E9%9D%9C%E7%81%AB%E6%99%9A%E5%AE%B4&display=swap">
+<link rel="preload" as="image" href="img/cover.webp" fetchpriority="high">
 <style>
 @property --x{syntax:'*';inherits:false}@property --y{syntax:'*';inherits:false}@property --r{syntax:'*';inherits:false}@property --b{syntax:'*';inherits:false}@property --wd{syntax:'*';inherits:false}@property --ht{syntax:'*';inherits:false}
 /* Layout: one continuous horizontal editorial canvas driven by vertical scroll (desktop); a vertical magazine story on phones.
@@ -122,6 +122,7 @@ html:not(.h) .credit{bottom:calc(env(safe-area-inset-bottom,0px) + 12px);font-si
 
 .back{background:none;border:0;color:inherit;cursor:pointer;font:500 11px/1 var(--f-sans);letter-spacing:.22em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid currentColor}
 .dsk{display:none}
+html:not(.h) .keep > .tx.endc{position:absolute;inset:0;padding:0 16px}
 .chap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 calc(var(--u)*4)}
 .chap a{display:grid;grid-template-columns:calc(var(--u)*5) 1fr auto;align-items:baseline;gap:calc(var(--u)*1.4);text-decoration:none;padding:calc(var(--u)*1.8) 0;border-bottom:1px solid rgba(241,232,216,.2)}
 .chap b{font:400 max(10px,calc(var(--u)*1.1))/1 var(--f-mono);color:var(--gold);letter-spacing:.1em}
@@ -186,6 +187,7 @@ html:not(.h) .split > .half{position:relative;padding:22vw 16px 16vw;min-height:
 html:not(.h) .split > .half > .ph{position:absolute;inset:0;aspect-ratio:auto;width:auto}
 html:not(.h) .split > .half > *:not(.ph){position:relative}
 html:not(.h) .mask{font-size:62vw!important}
+html:not(.h) .mask.long{font-size:23vw!important;line-height:1!important}
 html:not(.h) .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 html:not(.h) .cjk.a{display:none}
 
@@ -197,7 +199,7 @@ html:not(.h) .cjk.a{display:none}
   <div class="brand">Shanghai Tang <span>上海灘</span></div>
   <nav aria-label="Sections">
     <a href="#intro" data-go="intro">Intro</a>
-    <a href="#cooking" data-go="cooking">Shanghai Cooking</a>
+    <a href="#concept" data-go="concept">The Concept</a>
     <a href="#treatment" data-go="treatment">The Film</a>
   </nav>
 </header>
@@ -217,8 +219,8 @@ html:not(.h) .cjk.a{display:none}
 
 <!-- 01 cover -->
 <section class="panel k vw keep shade" id="intro" data-sec="intro" style="--sh:linear-gradient(90deg,rgba(10,9,9,.88) 0%,rgba(10,9,9,.45) 38%,rgba(10,9,9,0) 70%),linear-gradient(0deg,rgba(10,9,9,.55),rgba(10,9,9,0) 40%)">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:62% 30%;--mop:10% 30%" data-s=".04">
-    <img src="img/cover_n.webp" alt="Model in a black and gold qipao and fur stole carrying a plated dish through a working kitchen during a fashion shoot" fetchpriority="high" decoding="async">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:70% 30%;--mop:62% 30%" data-s=".04">
+    <img src="img/cover.webp" alt="A woman slipping a red silk Shanghai Tang blazer over a teal silk blouse in a lacquered dressing room" fetchpriority="high" decoding="async">
   </figure>
   <div class="a tx top dsk" style="--x:5%;--y:12%"><p class="mono" style="opacity:.7">No. 01 — Abu Dhabi — October 2026</p></div>
   <div class="cjk a" style="--r:3.2%;--y:14%;z-index:2" aria-hidden="true">上海灘 · 阿布扎比</div>
@@ -233,16 +235,16 @@ html:not(.h) .cjk.a{display:none}
 <!-- 02 fashion food abu dhabi -->
 <section class="panel iv words-behind" data-sec="intro" style="--w:158">
   <figure class="ph a rv m-l" style="--x:7%;--y:8%;--wd:16%;--ht:58%;--ar:3/4">
-    <img src="img/tri_fabric_n.webp" alt="Teal silk brocade, close crop" decoding="async">
+    <img src="img/tri_1.webp" alt="Red silk lapel and a gold earring" decoding="async">
   </figure>
   <h2 class="disp it t-xl a" style="--x:4%;--y:61.5%">Fashion.</h2>
-  <p class="mono a dsk" style="--x:24%;--y:8%" ><span class="vt" style="display:inline-block">Fig. a — Silk brocade</span></p>
+  <p class="mono a dsk" style="--x:24%;--y:8%" ><span class="vt" style="display:inline-block">Fig. a — Silk, the blazer</span></p>
 
   <figure class="ph a rv m-r" style="--x:40%;--y:22%;--wd:16%;--ht:58%;--ar:3/4">
-    <img src="img/tri_food_n.webp" alt="Langoustine and lobster on ice" decoding="async">
+    <img src="img/tri_2.webp" alt="A translucent har gow dumpling lifted with jade chopsticks" decoding="async">
   </figure>
   <h2 class="disp it t-xl a" style="--x:43.5%;--y:78%">Food.</h2>
-  <p class="mono a dsk" style="--x:57%;--y:22%"><span class="vt" style="display:inline-block">Fig. b — Langoustine, ice</span></p>
+  <p class="mono a dsk" style="--x:57%;--y:22%"><span class="vt" style="display:inline-block">Fig. b — Har gow, jade chopsticks</span></p>
 
   <figure class="ph a rv m-l" style="--x:76%;--y:6%;--wd:16%;--ht:58%;--ar:3/4">
     <img src="img/tri_dune_n.webp" alt="Desert dunes at sunset" decoding="async">
@@ -254,11 +256,11 @@ html:not(.h) .cjk.a{display:none}
 <!-- 03 proposition -->
 <section class="panel k" data-sec="intro" style="--w:138">
   <figure class="ph a rv m-n" style="--x:6%;--y:10%;--wd:28%;--ht:80%;--ar:4/5">
-    <img src="img/prop_face_n.webp" alt="Black and white close-up of a model's face" decoding="async">
+    <img src="img/prop.webp" alt="Black and white: a woman retouching her red lipstick in a mirror" decoding="async">
   </figure>
   <p class="cap a" style="--x:42%;--y:12%">The question</p>
-  <p class="disp t-m a" style="--x:42%;--y:20%;--wd:52%">What if the restaurant opening felt more like a <em class="rd" style="color:#d33a45">fashion campaign</em> than a restaurant commercial?</p>
-  <p class="mono a" style="--x:42%;--b:12%;--wd:46%;opacity:.55">Food, clothing, performance, location and filmmaking. One world.</p>
+  <p class="disp t-m a" style="--x:42%;--y:20%;--wd:52%">What if an opening film moved at <em style="color:#d33a45">two speeds?</em> The calm of dressing for dinner. The rush of a restaurant getting ready.</p>
+  <p class="mono a" style="--x:42%;--b:12%;--wd:46%;opacity:.55">Classic. Refined. Rooted in fine dining.</p>
 </section>
 
 <!-- 04 the lens -->
@@ -266,7 +268,7 @@ html:not(.h) .cjk.a{display:none}
   <div class="a" style="--x:4%;--y:12%;--wd:25%">
     <p class="cap" style="margin-bottom:calc(var(--u)*2)">The lens</p>
     <h2 class="disp t-l">Fashion is how we enter.</h2>
-    <p class="body" style="margin-top:calc(var(--u)*3)">Rather than a restaurant commercial, the opening borrows the visual language of Shanghai Tang fashion. The clothes come first. The restaurant is discovered through them.</p>
+    <p class="body" style="margin-top:calc(var(--u)*3)">The wardrobe comes directly from Shanghai Tang in China. The clothes come first, and the restaurant is discovered through them.</p>
   </div>
   <div class="a sheet" style="--x:33%;--y:14%;--wd:63%;grid-template-columns:repeat(5,1fr);background:#e6dcc9">
     <div class="edge" style="color:var(--red)"><span>SHANGHAI TANG — COLLECTION REFERENCE</span><span>→ 01–05</span></div>
@@ -282,195 +284,236 @@ html:not(.h) .cjk.a{display:none}
 
 <!-- 05 contents -->
 <section class="panel k" data-sec="intro" style="--w:132">
-  <p class="cap a" style="--x:6%;--y:11%">Contents — The direction</p>
+  <p class="cap a" style="--x:6%;--y:11%">Contents — The concept</p>
   <div class="toc a" style="--x:6%;--y:20%;--wd:88%">
-    <a href="#cooking" data-go="cooking">
-      <span class="n">01</span>
-      <span class="ti"><span class="disp t-l">Shanghai Cooking</span><span class="disp it t-s" style="opacity:.75">Fashion enters the kitchen.</span></span>
-      <span class="pg" data-page="cooking">p. 06</span>
-      <span class="ph"><img src="img/idx_fire_n.webp" alt="" loading="lazy" decoding="async" style="--op:50% 60%"></span>
+    <a href="#concept" data-go="concept">
+      <span class="n">—</span>
+      <span class="ti"><span class="disp t-l">Dressed for Dinner</span><span class="disp it t-s" style="opacity:.75">Two tempos, one evening.</span></span>
+      <span class="pg" data-page="concept">p. 06</span>
+      <span class="ph"><img src="img/idx.webp" alt="" loading="lazy" decoding="async" style="--op:50% 45%"></span>
     </a>
   </div>
   <ol class="chap a" style="--x:6%;--y:58%;--wd:88%">
     <li><a href="#idea" data-go="idea"><b>i</b><span>The idea</span><i data-page="idea">p. 07</i></a></li>
-    <li><a href="#studio" data-go="studio"><b>ii</b><span>The set</span><i data-page="studio">p. 08</i></a></li>
-    <li><a href="#action" data-go="action"><b>iii</b><span>The action</span><i data-page="action">p. 09</i></a></li>
-    <li><a href="#crew" data-go="crew"><b>iv</b><span>The crew</span><i data-page="crew">p. 11</i></a></li>
-    <li><a href="#cast" data-go="cast"><b>v</b><span>The cast</span><i data-page="cast">p. 12</i></a></li>
-    <li><a href="#treatment" data-go="treatment"><b>vi</b><span>The film</span><i data-page="treatment">p. 14</i></a></li>
+    <li><a href="#ready" data-go="ready"><b>ii</b><span>Getting ready</span><i data-page="ready">p. 09</i></a></li>
+    <li><a href="#arrival" data-go="arrival"><b>iii</b><span>The arrival</span><i data-page="arrival">p. 13</i></a></li>
+    <li><a href="#dinner" data-go="dinner"><b>iv</b><span>The dinner</span><i data-page="dinner">p. 14</i></a></li>
+    <li><a href="#pause" data-go="pause"><b>v</b><span>The pause</span><i data-page="pause">p. 15</i></a></li>
+    <li><a href="#treatment" data-go="treatment"><b>vi</b><span>The film</span><i data-page="treatment">p. 18</i></a></li>
   </ol>
 </section>
 
-<!-- ============ DIRECTION 01 ============ -->
+<!-- ============ CONCEPT ============ -->
 
 <!-- 06 title -->
-<section class="panel k" id="cooking" data-sec="cooking" style="--w:152">
-  <h2 class="mask a" style="--x:2%;--y:4%;font-size:calc(var(--u)*80);--img:url(img/c_title_n.webp);--bp:50% 40%" aria-label="01">01</h2>
-  <div class="a" style="--x:61%;--y:28%;--wd:34%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2.4)">The creative direction</p>
-    <h2 class="disp t-xl" style="line-height:.86">Shanghai<br>Cooking</h2>
-    <p class="disp it t-s" style="margin-top:calc(var(--u)*3)">Fashion enters the kitchen.</p>
+<section class="panel k" id="concept" data-sec="concept" style="--w:196">
+  <h2 class="mask long a" style="--x:3%;--y:10%;font-size:calc(var(--u)*27);line-height:.9;--img:url(img/mask.webp);--bp:60% 40%" aria-label="Dressed">Dressed</h2>
+  <div class="a" style="--x:3.6%;--y:46%;--wd:56%">
+    <h2 class="disp it t-xl" style="line-height:.9">for Dinner</h2>
+    <p class="disp it t-s" style="margin-top:calc(var(--u)*3);max-width:24ch">Two tempos, one evening.</p>
+    <p class="cap" style="margin-top:calc(var(--u)*4)">The creative concept</p>
   </div>
-  <div class="cjk a" style="--r:3.4%;--y:12%;opacity:.8" aria-hidden="true">廚房</div>
+  <figure class="ph a rv m-r" style="--r:4%;--y:10%;--wd:19%;--ht:80%;--ar:3/4">
+    <img src="img/title_strip.webp" alt="A red silk blazer waiting on a wooden valet stand" loading="lazy" decoding="async">
+  </figure>
+  <p class="mono a dsk" style="--r:24.5%;--y:10%"><span class="vt" style="display:inline-block">Fig. 01 — Waiting, 19:40</span></p>
+  <div class="cjk a" style="--r:24.6%;--b:10%;opacity:.75" aria-hidden="true">晚宴</div>
 </section>
 
 <!-- 07 idea -->
-<section class="panel iv" id="idea" data-sec="cooking" style="--w:124">
+<section class="panel iv" id="idea" data-sec="concept" style="--w:124">
   <p class="cap a" style="--x:10%;--y:14%">The idea</p>
   <div class="a" style="--x:10%;--y:24%;--wd:78%;display:grid;gap:calc(var(--u)*3.2)">
-    <p class="disp t-m">The restaurant becomes the set.</p>
-    <p class="disp t-m">The models become the kitchen team.</p>
-    <p class="disp it t-m rd">And the making of the campaign becomes the film.</p>
+    <p class="disp t-m">Before a great dinner, everyone gets ready.</p>
+    <p class="disp t-m">She dresses in Shanghai Tang, slowly.</p>
+    <p class="disp it t-m rd">The restaurant gets ready for her, fast.</p>
   </div>
-  <p class="mono a" style="--x:10%;--b:10%">A backstage film of a fictional Shanghai Tang shoot, inside the restaurant kitchen.</p>
+  <p class="mono a" style="--x:10%;--b:10%">A fashion film that moves between the calm of a ritual and the speed of a kitchen.</p>
 </section>
 
-<!-- 08 kitchen becomes studio -->
-<section class="panel k" id="studio" data-sec="cooking" style="--w:205">
-  <p class="mono a" style="--x:4%;--y:7%;opacity:.6">TC 01:00:12:04 &nbsp;—&nbsp; SC. 1 &nbsp;—&nbsp; KITCHEN / WIDE</p>
-  <figure class="ph a px rv bleed" style="--x:0;--y:11%;--wd:100%;--ht:70%;--ar:16/10;--op:50% 45%" data-s=".05">
-    <img src="img/c_kitchen_n.webp" alt="Wide backstage view: models cooking at the wok and chopping while a stylist fixes hair and a camera operator films" loading="lazy" decoding="async">
+<!-- 08 two tempos -->
+<section class="panel iv" data-sec="concept" style="--w:212">
+  <p class="cap a" style="--x:4%;--y:8%">Two tempos</p>
+  <figure class="ph a rv m-l" style="--x:4%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/calm.webp" alt="Black and white: a woman applying lipstick at a vanity mirror" loading="lazy" decoding="async">
   </figure>
-  <h2 class="disp t-l a" style="--x:4%;--b:5%">The kitchen becomes the studio.</h2>
-  <p class="mono a dsk" style="--r:4%;--b:7%;opacity:.6">Fig. 01 — Set, between takes</p>
-</section>
-
-<!-- 09 they cook -->
-<section class="panel k keep shade" id="action" data-sec="cooking" style="--w:168;--sh:linear-gradient(90deg,rgba(10,9,9,.55),rgba(10,9,9,0) 45%),linear-gradient(0deg,rgba(10,9,9,.5),rgba(10,9,9,0) 35%)">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 0%;--mop:42% 50%" data-s=".05">
-    <img src="img/c_wok_n.webp" alt="Model in a red qipao working a flaming wok, chillies in the air" loading="lazy" decoding="async">
-  </figure>
-  <h2 class="disp t-xl a tx top dr" style="--x:4.5%;--y:9%;z-index:2;line-height:.86" data-s="-.06">Models<br>don’t pose.</h2>
-  <h2 class="disp it t-xxl a tx dr" style="--r:4.5%;--b:7%;z-index:2;text-shadow:0 4px 60px rgba(10,9,9,.55)" data-s=".05">They cook.</h2>
-</section>
-
-<!-- 10 chop flame plate serve -->
-<section class="panel k grid2" data-sec="cooking" style="--w:212">
-  <p class="mono head mob" style="opacity:.6">Action — four beats</p>
-  <div class="a" style="--x:5%;--y:8%;--wd:18%;--ht:76%">
-    <p class="mono dsk" style="opacity:.55;margin-bottom:8px">TC 01:02:14:08</p>
-    <figure class="ph rv" style="height:78%;--ar:3/4"><img src="img/c_chop_n.webp" alt="Cleaver chopping greens" loading="lazy" decoding="async"></figure>
-    <h3 class="disp it t-xl" style="margin-top:calc(var(--u)*-3.2);position:relative;text-shadow:0 2px 30px rgba(10,9,9,.6)">Chop.</h3>
+  <div class="a" style="--x:30.5%;--y:58%;--wd:17%">
+    <h2 class="disp it t-xl">Slow.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">The ritual. Locked off. Long takes.</p>
   </div>
-  <div class="a" style="--x:28%;--y:20%;--wd:18%;--ht:76%">
-    <p class="mono dsk" style="opacity:.55;margin-bottom:8px">TC 01:02:31:17</p>
-    <figure class="ph rv" style="height:72%;--ar:3/4"><img src="img/c_flame_n.webp" alt="Flames and chillies leaping from a wok" loading="lazy" decoding="async"></figure>
-    <h3 class="disp it t-xl" style="margin-top:calc(var(--u)*-3.2);position:relative;text-shadow:0 2px 30px rgba(10,9,9,.6)">Flame.</h3>
+  <div class="a dsk" style="--x:50%;--y:14%;--wd:1px;--ht:76%;background:currentColor;opacity:.25"></div>
+  <div class="a" style="--x:53%;--y:14%;--wd:17%">
+    <h2 class="disp it t-xl rd">Fast.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">The preparation. Precise. Rhythmic.</p>
   </div>
-  <div class="a" style="--x:51%;--y:6%;--wd:18%;--ht:76%">
-    <p class="mono dsk" style="opacity:.55;margin-bottom:8px">TC 01:03:05:02</p>
-    <figure class="ph rv" style="height:78%;--ar:3/4"><img src="img/c_plate_n.webp" alt="Plated dish carried against a fur stole" loading="lazy" decoding="async"></figure>
-    <h3 class="disp it t-xl" style="margin-top:calc(var(--u)*-3.2);position:relative;text-shadow:0 2px 30px rgba(10,9,9,.6)">Plate.</h3>
-  </div>
-  <div class="a" style="--x:74%;--y:16%;--wd:18%;--ht:76%">
-    <p class="mono dsk" style="opacity:.55;margin-bottom:8px">TC 01:03:40:21</p>
-    <figure class="ph rv" style="height:74%;--ar:3/4"><img src="img/c_serve_n.webp" alt="Model in qipao serving a plate" loading="lazy" decoding="async"></figure>
-    <h3 class="disp it t-xl" style="margin-top:calc(var(--u)*-3.2);position:relative;text-shadow:0 2px 30px rgba(10,9,9,.6)">Serve.</h3>
-  </div>
-</section>
-
-<!-- 11 crew -->
-<section class="panel k" id="crew" data-sec="cooking" style="--w:222">
-  <figure class="ph a px bleed" style="--x:0;--y:0;--wd:52%;--ht:100%;--ar:4/5;--op:30% 50%" data-s=".05">
-    <img src="img/c_crew_n.webp" alt="Black and white: camera operator and stylist at work beside the chopping station" loading="lazy" decoding="async">
-  </figure>
-  <h2 class="disp t-l a" style="--x:4%;--b:8%;--wd:42%;z-index:2;text-shadow:0 0 40px rgba(0,0,0,.5)">The crew stays in the frame.</h2>
-  <div class="a sheet" style="--x:56%;--y:12%;--wd:40%;grid-template-columns:repeat(3,1fr)">
-    <div class="edge"><span>ST · AUH · BACKSTAGE</span><span>ROLL 04 ▸</span></div>
-    <figure class="frame"><div class="ph"><img src="img/cs_softbox_n.webp" alt="Softbox" loading="lazy" decoding="async"></div><figcaption>14</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/cs_stylist_n.webp" alt="Stylist adjusting a model's hair" loading="lazy" decoding="async"></div><figcaption>14A</figcaption>
-      <svg class="circle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="50" cy="50" rx="48" ry="44" transform="rotate(-4 50 50)"/><ellipse cx="50" cy="51" rx="46" ry="46" transform="rotate(5 50 50)" style="opacity:.5"/></svg></figure>
-    <figure class="frame"><div class="ph"><img src="img/cs_monitor_n.webp" alt="Camera monitor" loading="lazy" decoding="async"></div><figcaption>15</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/cs_makeup_n.webp" alt="Make-up and wardrobe between takes" loading="lazy" decoding="async"></div><figcaption>15A</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/cs_camera_n.webp" alt="Camera operator" loading="lazy" decoding="async"></div><figcaption>16</figcaption></figure>
-    <figure class="frame"><div class="ph"><img src="img/cs_monitor2_n.webp" alt="Monitor showing the shot" loading="lazy" decoding="async"></div><figcaption>16A</figcaption></figure>
-  </div>
-  <p class="cap a" style="--x:56%;--b:10%;--wd:40%">Cameras · Lighting · Stylists · Make-up · Monitors · Reflectors · People entering frame</p>
-</section>
-
-<!-- 12 roles -->
-<section class="panel iv" id="cast" data-sec="cooking" style="--w:202">
-  <div class="a" style="--x:5%;--y:10%;--wd:27%">
-    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Cast</p>
-    <h2 class="disp t-l">Everyone performs a role.</h2>
-    <ul class="cast" style="margin-top:calc(var(--u)*5)">
-      <li>The chef <span>Model</span></li>
-      <li>The waitress <span>Model</span></li>
-      <li>The host <span>Model</span></li>
-      <li>The kitchen <span>Real chefs</span></li>
-    </ul>
-  </div>
-  <figure class="a rv m-l" style="--x:37%;--y:8%;--wd:18%;--ht:76%;margin:0;display:flex;flex-direction:column;gap:8px">
-    <div class="ph" style="flex:1;--ar:3/4"><img src="img/role_chef_n.webp" alt="Model as chef at the wok, jade-toned" loading="lazy" decoding="async"></div>
-    <figcaption class="mono">Look 01 — Model as chef</figcaption>
-  </figure>
-  <figure class="a rv m-r" style="--x:58%;--y:16%;--wd:20%;--ht:78%;margin:0;display:flex;flex-direction:column;gap:8px">
-    <div class="ph" style="flex:1;--ar:3/4"><img src="img/role_waitress_n.webp" alt="Model as waitress carrying a plate" loading="lazy" decoding="async"></div>
-    <figcaption class="mono">Look 02 — Model as waitress</figcaption>
-  </figure>
-  <figure class="a rv m-l" style="--x:81%;--y:6%;--wd:15%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:8px">
-    <div class="ph" style="flex:1;--ar:3/4"><img src="img/role_host_n.webp" alt="Model as host leaning on the pass" loading="lazy" decoding="async"></div>
-    <figcaption class="mono">Look 03 — Model as host</figcaption>
+  <figure class="ph a rv m-r" style="--x:72%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/fast.webp" alt="Overhead mise en place: bowls of spring onion and chilli, a chef's hands blurred with a cleaver" loading="lazy" decoding="async">
   </figure>
 </section>
 
-<!-- 13 film language statement -->
-<section class="panel bu" data-sec="cooking" style="--w:162">
-  <figure class="ph a px bleed" style="--x:38%;--y:0;--wd:62%;--ht:100%;--ar:4/3;opacity:.62" data-s=".04">
-    <img src="img/c_film_n.webp" alt="Burgundy-toned backstage frame of the kitchen shoot" loading="lazy" decoding="async">
+<!-- 09 getting ready -->
+<section class="panel k keep shade" id="ready" data-sec="concept" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.7),rgba(10,9,9,0) 48%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:40% 40%;--mop:30% 40%" data-s=".05">
+    <img src="img/ready.webp" alt="A woman in a teal silk blouse applying red lipstick at a brass vanity mirror, a red blazer waiting beside her" loading="lazy" decoding="async">
   </figure>
-  <div class="a" style="--x:6%;--y:12%;--wd:52%;display:grid;gap:calc(var(--u)*2.4);z-index:2">
-    <p class="cap">Film language</p>
-    <p class="disp t-m">The campaign happens in front of us.</p>
-    <p class="disp it t-m">The film captures everything around it.</p>
+  <div class="a tx" style="--x:4.5%;--b:8%;--wd:62%;z-index:2">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">Getting ready</p>
+    <h2 class="disp t-l">She takes <em>her time.</em></h2>
   </div>
-  <div class="a" style="--x:6%;--b:9%;--wd:88%;z-index:2">
-    <hr class="rule" style="margin-bottom:calc(var(--u)*2.4)">
-    <p class="disp t-xl" style="line-height:.9">Vogue backstage.<br><em>In a working kitchen.</em></p>
+  <p class="mono a dsk" style="--r:4%;--b:9%;z-index:2;opacity:.75">Silk. Buttons. Earrings. Lipstick.</p>
+</section>
+
+<!-- 10 the edit -->
+<section class="panel k" data-sec="concept" style="--w:236">
+  <div class="a" style="--x:4%;--y:10%;--wd:34%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The edit</p>
+    <h2 class="disp t-l">The ritual, cut <em>against the rush.</em></h2>
+    <p class="body" style="margin-top:calc(var(--u)*2.6)">Long, still takes of her getting ready. Bursts of a few frames from the kitchen and the dining room. The faster they move, the more precious her evening feels.</p>
+  </div>
+  <div class="a rhythm" style="--x:4%;--y:54%;--wd:92%;--ht:34%">
+    <figure class="t" style="flex:6"><div class="ph"><img src="img/r1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Her — 06s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r2.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r3.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.3s</figcaption></figure>
+    <figure class="t" style="flex:5"><div class="ph"><img src="img/r4.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Her — 05s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r5.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure class="t" style="flex:7"><div class="ph"><img src="img/r6.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Arrival — 07s</figcaption></figure>
+  </div>
+  <p class="mono a dsk" style="--x:4%;--y:50%;opacity:.55">Frame widths drawn to shot length</p>
+</section>
+
+<!-- 11 the restaurant -->
+<section class="panel k keep shade" data-sec="concept" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.72),rgba(10,9,9,0) 50%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:76% 40%" data-s=".05">
+    <img src="img/fire.webp" alt="A chef tossing a flaming wok in the kitchen" loading="lazy" decoding="async">
+  </figure>
+  <div class="a tx dr" style="--x:4.5%;--b:8%;z-index:2" data-s="-.04">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">Meanwhile, the restaurant</p>
+    <h2 class="disp it t-xl" style="line-height:.88">Everything<br>else moves fast.</h2>
   </div>
 </section>
 
-<!-- 14 treatment 01 -->
-<section class="panel k" id="treatment" data-sec="film" style="--w:236">
+<!-- 12 preparation inserts -->
+<section class="panel bu" data-sec="concept" style="--w:216">
+  <div class="a" style="--x:4%;--y:10%;--wd:20%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Mise en place</p>
+    <h2 class="disp t-m">Fast, <em>never chaotic.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">The kitchen and the dining room move like choreography. Speed ramps, match cuts, clean precise moves.</p>
+  </div>
+  <div class="a strips grid3" style="--x:27%;--y:0;--wd:69%;--ht:100%">
+    <figure class="ph a rv" style="--x:0;--y:8%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i1.webp" alt="Black and white: a white-gloved hand placing jade chopsticks" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:35%;--y:14%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i2.webp" alt="Black and white: a cleaver blurring through spring onions and chillies" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:70%;--y:4%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i3.webp" alt="Hand-pleated xiaolongbao in bamboo steamers" loading="lazy" decoding="async"></figure>
+  </div>
+  <p class="mono a dsk" style="--x:27%;--y:88%;opacity:.65">The table</p>
+  <p class="mono a dsk" style="--x:51.15%;--y:94%;opacity:.65">The knife</p>
+  <p class="mono a dsk" style="--x:75.3%;--y:84%;opacity:.65">The fold</p>
+</section>
+
+<!-- 13 arrival -->
+<section class="panel k" id="arrival" data-sec="concept" style="--w:204">
+  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">The room is ready. The pace drops at once.</p>
+  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 24%" data-s=".05">
+    <img src="img/arrival.webp" alt="The couple, she in a red silk suit and he in a beige suit, walking into the empty, prepared dining room" loading="lazy" decoding="async">
+  </figure>
+  <h2 class="disp t-l a" style="--x:4%;--b:5%">They arrive. <em>Everything slows.</em></h2>
+</section>
+
+<!-- 14 the dinner: three themes -->
+<section class="panel iv" id="dinner" data-sec="concept" style="--w:236">
+  <div class="a" style="--x:4%;--y:10%;--wd:22%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The dinner</p>
+    <h2 class="disp t-l">Course by course, <em>at her pace.</em></h2>
+    <p class="body" style="margin-top:calc(var(--u)*2.6)">Each course is a short burst back into the kitchen, then the dish lands in calm. At the table, the brief's three territories come together.</p>
+  </div>
+  <figure class="a rv" style="--x:30%;--y:9%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th1.webp" alt="Her silhouette at the dinner table, red silk against the dark room" loading="lazy" decoding="async"></div>
+    <figcaption><span class="cap">01 — Silhouettes</span><span class="disp it t-s" style="display:block;margin-top:6px">Fashion and food share shape and proportion.</span></figcaption>
+  </figure>
+  <figure class="a rv" style="--x:53%;--y:15%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th2.webp" alt="A gloved hand placing jade chopsticks with precision" loading="lazy" decoding="async"></div>
+    <figcaption><span class="cap">02 — Tailored taste</span><span class="disp it t-s" style="display:block;margin-top:6px">Precision on both sides of the pass.</span></figcaption>
+  </figure>
+  <figure class="a rv" style="--x:76%;--y:9%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th3.webp" alt="A red silk sleeve and gold bangle as jade chopsticks lift a har gow over a porcelain spoon" loading="lazy" decoding="async"></div>
+    <figcaption><span class="cap">03 — Sensory depths</span><span class="disp it t-s" style="display:block;margin-top:6px">Silk, porcelain, glaze, steam.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 15 the pause -->
+<section class="panel k keep shade" id="pause" data-sec="concept" style="--w:182;--sh:linear-gradient(90deg,rgba(10,9,9,.7),rgba(10,9,9,0) 50%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:60% 40%;--mop:68% 40%" data-s=".05">
+    <img src="img/pause.webp" alt="Alone in the powder room, she retouches her red lipstick in an antique mirror" loading="lazy" decoding="async">
+  </figure>
+  <div class="a tx dr" style="--x:4.5%;--b:9%;--wd:40%;z-index:2" data-s="-.04">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The pause</p>
+    <h2 class="disp t-l">Mid-dinner, <em>she steps away.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">The powder room. She retouches her lips. The quietest moment of the film.</p>
+  </div>
+</section>
+
+<!-- 16 one stroke -->
+<section class="panel k" data-sec="concept" style="--w:190">
+  <figure class="ph a rv m-l" style="--x:4%;--y:10%;--wd:28%;--ht:80%;--ar:4/5">
+    <img src="img/lips.webp" alt="Red-toned close-up: lipstick drawn across her lips" loading="lazy" decoding="async">
+  </figure>
+  <figure class="ph a rv m-r" style="--x:34%;--y:10%;--wd:36%;--ht:80%;--ar:4/5">
+    <img src="img/glaze.webp" alt="A brush drawing a stroke of red glaze across sliced Peking duck" loading="lazy" decoding="async">
+  </figure>
+  <div class="a" style="--x:74%;--y:12%;--wd:22%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Match cut</p>
+    <h2 class="disp t-m">One stroke. <em>Two rituals.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">Her lipstick cuts to a chef's brush of glaze. Then back to the table.</p>
+  </div>
+</section>
+
+<!-- 17 back to the table -->
+<section class="panel k" data-sec="concept" style="--w:204">
+  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">The last course arrives. A look between them.</p>
+  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 55%" data-s=".05">
+    <img src="img/table.webp" alt="The couple seated at a black marble table in the dark, empty restaurant" loading="lazy" decoding="async">
+  </figure>
+  <h2 class="disp t-l a" style="--x:4%;--b:5%">Back to <em>the evening.</em></h2>
+</section>
+
+<!-- 18 treatment -->
+<section class="panel ja" id="treatment" data-sec="film" style="--w:236">
   <div class="a" style="--x:4%;--y:9%">
     <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment</p>
-    <h2 class="disp t-l">Shanghai Cooking,<br><em>on film.</em></h2>
+    <h2 class="disp t-l">Dressed for Dinner,<br><em>on film.</em></h2>
   </div>
-  <div class="a cols" style="--x:4%;--y:44%;--wd:50%;grid-template-columns:repeat(3,1fr)">
-    <div class="col"><h3>Camera</h3><p>Observational. Close. Fluid.<br>Sometimes perfectly composed.<br><em>Sometimes caught between takes.</em></p></div>
-    <div class="col"><h3>Light</h3><p>Editorial flash meets warm kitchen light.<br><em>Fire, chrome, steam and skin.</em></p></div>
-    <div class="col"><h3>Movement</h3><p>Controlled fashion posing,<br><em>interrupted by real cooking.</em></p></div>
+  <div class="a cols" style="--x:4%;--y:42%;--wd:54%;grid-template-columns:repeat(4,1fr)">
+    <div class="col"><h3>Camera</h3><p>Her: locked off, symmetrical.<br><em>The restaurant: fluid, precise, fast.</em></p></div>
+    <div class="col"><h3>Light</h3><p>Warm, low, chiaroscuro.<br><em>Like a still life.</em></p></div>
+    <div class="col"><h3>Sound</h3><p>Silk, porcelain, glass.<br><em>Sparse music.</em></p></div>
+    <div class="col"><h3>Cast</h3><p>Two models in Shanghai Tang.<br><em>The kitchen and service team.</em></p></div>
   </div>
-  <div class="a" style="--x:63%;--y:9%;--wd:27%">
+  <p class="mono a" style="--x:4%;--b:9%;--wd:52%;opacity:.7">One location. One shoot day. Inside the restaurant. Closes on a single card: Coming soon.</p>
+  <div class="a" style="--x:63%;--y:9%;--wd:30%">
     <p class="cap" style="margin-bottom:calc(var(--u)*1.6)">Details — index</p>
     <div class="idx">
-      <figure><div class="ph"><img src="img/d_hands_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>01 Hands</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_fabric_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>02 Fabric</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_fire_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>03 Fire</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_knife_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>04 Knives</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_steam_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>05 Steam</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_plates_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>06 Plates</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_lips_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>07 Lipstick</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_jewel_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>08 Jewellery</figcaption></figure>
-      <figure><div class="ph"><img src="img/d_flash_n.webp" alt="" loading="lazy" decoding="async"></div><figcaption>09 Camera flash</figcaption></figure>
+      <figure><div class="ph"><img src="img/x1.webp" alt="" loading="lazy" decoding="async"></div><figcaption>01 Earring</figcaption></figure>
+      <figure><div class="ph"><img src="img/x2.webp" alt="" loading="lazy" decoding="async"></div><figcaption>02 Silk</figcaption></figure>
+      <figure><div class="ph"><img src="img/x3.webp" alt="" loading="lazy" decoding="async"></div><figcaption>03 Mise en place</figcaption></figure>
+      <figure><div class="ph"><img src="img/x4.webp" alt="" loading="lazy" decoding="async"></div><figcaption>04 Crystal</figcaption></figure>
+      <figure><div class="ph"><img src="img/x5.webp" alt="" loading="lazy" decoding="async"></div><figcaption>05 Glaze</figcaption></figure>
+      <figure><div class="ph"><img src="img/x6.webp" alt="" loading="lazy" decoding="async"></div><figcaption>06 Compact</figcaption></figure>
+      <figure><div class="ph"><img src="img/x7.webp" alt="" loading="lazy" decoding="async"></div><figcaption>07 The table</figcaption></figure>
+      <figure><div class="ph"><img src="img/x8.webp" alt="" loading="lazy" decoding="async"></div><figcaption>08 Vanity</figcaption></figure>
+      <figure><div class="ph"><img src="img/x9.webp" alt="" loading="lazy" decoding="async"></div><figcaption>09 Fire</figcaption></figure>
     </div>
   </div>
 </section>
 
-<!-- ============ END ============ -->
-
-<section class="panel k vw keep shade" id="fin" data-sec="fin" style="--sh:linear-gradient(90deg,rgba(10,9,9,.85),rgba(10,9,9,.35))">
-  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 35%;--mop:38% 40%" data-s=".04">
-    <img src="img/e_final1_n.webp" alt="Black and white: the backstage kitchen shoot, models at the wok and the pass, camera and monitor in the foreground" loading="lazy" decoding="async">
+<!-- 19 end card -->
+<section class="panel k vw keep" id="fin" data-sec="fin">
+  <figure class="ph a" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.22;--op:50% 50%">
+    <img src="img/end.webp" alt="" loading="lazy" decoding="async">
   </figure>
-  <div class="a tx top" style="--x:6%;--y:17%;--wd:80%;z-index:2">
-    <h2 class="disp t-xl" style="line-height:.9">Shanghai Cooking.<br><em>Fashion enters the kitchen.</em></h2>
+  <div class="a tx endc" style="--x:0;--y:0;--wd:100%;--ht:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;text-align:center">
+    <p class="cap" style="color:var(--ivory);letter-spacing:.5em;font-size:max(12px,calc(var(--u)*1.6))">Coming soon</p>
   </div>
-  <div class="a tx" style="--x:6%;--b:12%;z-index:2">
-    <p class="disp it t-s" style="margin-bottom:calc(var(--u)*3)">Fashion first. Food always.</p>
-    <p class="cap" style="color:var(--ivory)">Shanghai Tang &nbsp;·&nbsp; Abu Dhabi &nbsp;·&nbsp; Opening film</p>
-    <p class="mono" style="margin-top:calc(var(--u)*1.4);opacity:.55">Creative direction treatment — INHAUS Digital — October 2026</p>
-    <button class="back" type="button" data-go="intro" style="margin-top:calc(var(--u)*3.4)">Back to the cover</button>
+  <div class="a tx" style="--x:0;--b:13%;--wd:100%;z-index:2;text-align:center">
+    <button class="back" type="button" data-go="intro">Back to the cover</button>
   </div>
 </section>
 
@@ -491,8 +534,8 @@ html:not(.h) .cjk.a{display:none}
   const navLinks = [...document.querySelectorAll('.mast nav a')];
   const mq = matchMedia('(min-width: 900px) and (min-aspect-ratio: 1/1)');
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
-  const SECTIONS = { intro: 'Intro', cooking: 'Shanghai Cooking', film: 'The film', fin: 'Fin' };
-  const NAVSEC = { intro: 'intro', cooking: 'cooking', film: 'treatment', fin: 'treatment' };
+  const SECTIONS = { intro: 'Intro', concept: 'Dressed for Dinner', film: 'The film', fin: 'Coming soon' };
+  const NAVSEC = { intro: 'intro', concept: 'concept', film: 'treatment', fin: 'treatment' };
   const pad = n => String(n).padStart(2, '0');
 
   let H = false, cur = 0, tgt = 0, max = 0, vw = innerWidth, vh = innerHeight;
@@ -561,7 +604,7 @@ html:not(.h) .cjk.a{display:none}
       t.className = 'tick'; t.dataset.sec = s;
       t.style.left = (max ? Math.min(1, p._x / max) * 100 : 0) + '%';
       const b = document.createElement('b');
-      b.textContent = { intro: 'Intro', cooking: 'Shanghai Cooking', film: 'The film', fin: 'Fin' }[s];
+      b.textContent = { intro: 'Intro', concept: 'The concept', film: 'The film', fin: 'Fin' }[s];
       t.appendChild(b);
       if (s === 'fin') { b.style.left = 'auto'; b.style.right = '0'; }
       ticksEl.appendChild(t);
