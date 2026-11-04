@@ -1,414 +1,731 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cinemacity — Our Food Is the Story</title>
-<meta name="description" content="A campaign concept for Cinemacity. A 35-second cinema pre-roll in which a chef talks about food the way a director talks about film.">
-<meta name="theme-color" content="#0C0B0B">
-<meta property="og:title" content="Cinemacity — Our Food Is the Story">
-<meta property="og:description" content="At most cinemas, food plays a supporting role. At Cinemacity, it becomes the main character.">
-<meta property="og:type" content="website">
-<link rel="stylesheet" href="assets/css/styles.css">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230C0B0B'/%3E%3Crect x='6' y='12' width='20' height='8' fill='%23C02026'/%3E%3C/svg%3E">
-</head>
-<body>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style></head><body>
+<title>Dressed for Dinner Treatment</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600&text=%E4%B8%8A%E6%B5%B7%E7%81%98%E9%98%BF%E5%B8%83%E6%89%8E%E6%AF%94%E5%BB%9A%E6%88%BF%E5%9F%8E%E5%B8%82%C2%B7%E9%9D%9C%E7%81%AB%E6%99%9A%E5%AE%B4&display=swap">
+<link rel="preload" as="image" href="img/cover.webp" fetchpriority="high">
+<style>
+@property --x{syntax:'*';inherits:false}@property --y{syntax:'*';inherits:false}@property --r{syntax:'*';inherits:false}@property --b{syntax:'*';inherits:false}@property --wd{syntax:'*';inherits:false}@property --ht{syntax:'*';inherits:false}
+/* Layout: one continuous horizontal editorial canvas driven by vertical scroll (desktop); a vertical magazine story on phones.
+   Single committed look: black / ivory / red / burgundy / jade spreads. Units scale with viewport height so every spread keeps its composition. */
+:root{
+  --black:#0A0909; --ivory:#F1E8D8; --red:#A81623; --burg:#4A0B13; --jade:#0E5549; --djade:#072F2B; --gold:#B69755;
+  --ink:#0A0909; --paper:#F1E8D8; --muted-k:rgba(241,232,216,.62); --muted-i:rgba(10,9,9,.6);
+  --f-disp:"Bodoni Moda","Didot","Bodoni 72","Times New Roman",serif;
+  --f-sans:"Hanken Grotesk","Helvetica Neue",Arial,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --f-cjk:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --u:1vw;
+  color-scheme:dark;
+}
+html,body{background:var(--black);color:var(--ivory)}
+body{font-family:var(--f-sans);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+*{box-sizing:border-box}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--red);color:var(--ivory)}
 
-<div class="grain" aria-hidden="true"></div>
+/* ---------- type ---------- */
+.disp{font-family:var(--f-disp);font-weight:400;line-height:.95;letter-spacing:-.015em;text-wrap:balance;margin:0}
+.it{font-style:italic}
+.t-xxl{font-size:calc(var(--u)*21)}
+.t-xl{font-size:calc(var(--u)*13.5)}
+.t-l{font-size:max(30px,calc(var(--u)*8.6))}
+.t-m{font-size:max(22px,calc(var(--u)*5.6));line-height:1.04}
+.t-s{font-size:max(18px,calc(var(--u)*3.2));line-height:1.1}
+.cap{font-family:var(--f-sans);font-size:max(10.5px,calc(var(--u)*1.2));letter-spacing:.2em;text-transform:uppercase;font-weight:500;line-height:1.5;margin:0}
+.mono{font-family:var(--f-mono);font-size:max(10px,calc(var(--u)*1.1));letter-spacing:.04em;line-height:1.45;margin:0}
+.body{font-family:var(--f-sans);font-size:max(14px,calc(var(--u)*1.55));line-height:1.5;max-width:42ch;margin:0}
+.cjk{font-family:var(--f-cjk);writing-mode:vertical-rl;letter-spacing:.35em;font-size:max(13px,calc(var(--u)*2.1))}
+.vt{writing-mode:vertical-rl;transform:rotate(180deg)}
+.dif{color:var(--ivory);mix-blend-mode:difference}
+.rd{color:var(--red)}
+em{font-style:italic}
+.rule{height:1px;background:currentColor;opacity:.35;border:0;margin:0}
 
-<a class="skip" href="#s1">Skip to the campaign</a>
+/* ---------- spreads ---------- */
+.panel{position:relative;overflow:hidden}
+.k{background:var(--black);color:var(--ivory)}
+.iv{background:var(--ivory);color:var(--ink)}
+.bu{background:var(--burg);color:var(--ivory)}
+.ja{background:var(--djade);color:var(--ivory)}
+.iv .cap,.iv .mono{color:var(--muted-i)}
+.k .cap,.bu .cap,.ja .cap{color:var(--muted-k)}
+.ph{margin:0;overflow:hidden;background:#151212;position:relative}
+.ph img{width:100%;height:100%;object-fit:cover;object-position:var(--op,50% 50%)}
+.ph video{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:var(--op,50% 50%);opacity:0;transition:opacity 1.1s ease;pointer-events:none}
+.ph video.on{opacity:1}
+.h .px video{width:112%;max-width:none;left:-6%;will-change:transform}
+html:not(.h) .ph video{display:none}
+@media (prefers-reduced-motion:reduce){.ph video{display:none}}
+.shade::after{content:"";position:absolute;inset:0;pointer-events:none;background:var(--sh)}
 
-<header class="mark" aria-hidden="true">
-  <span class="mark__brand">Cinemacity</span>
-  <span class="mark__rule"></span>
-  <span class="mark__line">Our Food Is the Story</span>
+/* ---------- chrome ---------- */
+.mast{position:fixed;z-index:20;top:0;left:0;right:0;display:flex;justify-content:space-between;align-items:center;
+  padding:calc(env(safe-area-inset-top,0px) + 18px) 28px 0;mix-blend-mode:difference;color:var(--ivory);pointer-events:none}
+.mast .brand{font-family:var(--f-sans);font-weight:600;font-size:11px;letter-spacing:.32em;text-transform:uppercase;display:flex;gap:14px;align-items:center}
+.mast .brand span{font-family:var(--f-cjk);letter-spacing:.1em;font-weight:400}
+.mast nav{display:flex;gap:26px;pointer-events:auto}
+.mast nav a{font-size:11px;letter-spacing:.22em;text-transform:uppercase;text-decoration:none;opacity:.55;transition:opacity .3s;padding:6px 0;font-weight:500}
+.mast nav a:hover,.mast nav a.on{opacity:1}
+.mast nav a:focus-visible,.toc a:focus-visible,.back:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
+.prog{position:fixed;z-index:20;left:28px;right:28px;bottom:calc(env(safe-area-inset-bottom,0px) + 18px);mix-blend-mode:difference;color:var(--ivory);pointer-events:none}
+.prog .bar{height:1px;background:rgba(241,232,216,.28);position:relative}
+.prog .fill{position:absolute;left:0;top:0;bottom:0;width:100%;background:var(--ivory);transform-origin:0 50%;transform:scaleX(0)}
+.prog .row{display:flex;justify-content:space-between;margin-bottom:9px;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+.prog .ticks{position:absolute;inset:0}
+.prog .tick{position:absolute;top:-3px;width:1px;height:7px;background:var(--ivory)}
+.prog .tick b{position:absolute;top:12px;left:0;font:500 9.5px/1 var(--f-mono);letter-spacing:.12em;white-space:nowrap;opacity:.5;text-transform:uppercase}
+.prog .tick.on b{opacity:1}
+.credit{position:fixed;z-index:21;left:50%;transform:translateX(-50%);bottom:calc(env(safe-area-inset-bottom,0px) + 28px);margin:0;
+  font:500 10.5px/1 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);mix-blend-mode:difference;pointer-events:none;white-space:nowrap}
+html:not(.h) .credit{bottom:calc(env(safe-area-inset-bottom,0px) + 12px);font-size:9.5px;letter-spacing:.16em;opacity:.85}
+.hint{display:inline-flex;align-items:center;gap:12px}
+.hint i{display:block;width:46px;height:1px;background:currentColor;transform-origin:0 50%;animation:hint 2.4s cubic-bezier(.6,0,.2,1) infinite}
+@keyframes hint{0%{transform:scaleX(0)}50%{transform:scaleX(1);transform-origin:0 50%}50.1%{transform-origin:100% 50%}100%{transform:scaleX(0);transform-origin:100% 50%}}
+
+/* contact sheet */
+.sheet{background:#121010;padding:calc(var(--u)*1.4);display:grid;gap:calc(var(--u)*1)}
+.sheet .edge{grid-column:1/-1;font-family:var(--f-mono);font-size:max(9px,calc(var(--u)*.95));letter-spacing:.3em;color:var(--gold);opacity:.8;display:flex;justify-content:space-between}
+.frame{position:relative;margin:0}
+.frame .ph{aspect-ratio:4/3}
+.frame figcaption{font-family:var(--f-mono);font-size:max(9px,calc(var(--u)*.95));color:var(--gold);margin-top:4px;letter-spacing:.12em}
+.circle{position:absolute;inset:-7% -6%;pointer-events:none;overflow:visible}
+.circle ellipse{fill:none;stroke:var(--red);stroke-width:2.2;stroke-linecap:round}
+
+/* lists */
+.cast{list-style:none;padding:0;margin:0;display:grid;gap:10px}
+.cast li{display:flex;align-items:baseline;gap:10px;font-family:var(--f-disp);font-style:italic;font-size:max(17px,calc(var(--u)*2.3))}
+.cast li::after{content:"";flex:1;order:2;border-bottom:1px dotted currentColor;opacity:.45;transform:translateY(-4px)}
+.cast li span{order:3;font-family:var(--f-mono);font-style:normal;font-size:max(10px,calc(var(--u)*1.05));letter-spacing:.1em;text-transform:uppercase;opacity:.7}
+.cols{display:grid;gap:calc(var(--u)*3)}
+.col h3{font-family:var(--f-sans);font-size:max(10.5px,calc(var(--u)*1.15));letter-spacing:.24em;font-weight:600;margin:0 0 calc(var(--u)*1.4);padding-bottom:calc(var(--u)*1);border-bottom:1px solid currentColor}
+.col p{font-family:var(--f-disp);font-size:max(16px,calc(var(--u)*2.15));line-height:1.22;margin:0}
+.idx{display:grid;grid-template-columns:repeat(3,1fr);gap:calc(var(--u)*1.2) calc(var(--u)*1)}
+.idx figure{margin:0}
+.idx .ph{aspect-ratio:1}
+.idx figcaption{font-family:var(--f-mono);font-size:max(9.5px,calc(var(--u)*1));letter-spacing:.08em;margin-top:5px;opacity:.75}
+.counts{list-style:none;margin:0;padding:0;display:grid;gap:calc(var(--u)*.6)}
+.counts li{display:flex;gap:calc(var(--u)*1.6);align-items:baseline;font-family:var(--f-disp);font-style:italic;font-size:max(20px,calc(var(--u)*3.6));line-height:1.05}
+.counts b{font-family:var(--f-mono);font-style:normal;font-weight:400;font-size:max(10px,calc(var(--u)*1.1));color:var(--gold);width:3ch}
+.words{display:grid;gap:2px;margin-top:calc(var(--u)*2.4)}
+.words span{font-family:var(--f-disp);font-style:italic;font-size:max(20px,calc(var(--u)*3.3));line-height:1.06}
+
+/* table of contents */
+.toc{display:grid}
+.toc a{display:grid;grid-template-columns:calc(var(--u)*8) 1fr auto calc(var(--u)*18);align-items:center;gap:calc(var(--u)*3);text-decoration:none;padding:calc(var(--u)*3) 0;border-top:1px solid rgba(241,232,216,.25)}
+.toc a:last-child{border-bottom:1px solid rgba(241,232,216,.25)}
+.toc .n{font-family:var(--f-mono);font-size:max(11px,calc(var(--u)*1.2));color:var(--gold);letter-spacing:.1em}
+.toc .ti{display:grid;gap:calc(var(--u)*1)}
+.toc .pg{font-family:var(--f-mono);font-size:max(11px,calc(var(--u)*1.2));letter-spacing:.1em;opacity:.7}
+.toc .ph{height:calc(var(--u)*13)}
+.toc a .ph img{transition:transform 1.2s cubic-bezier(.2,.7,.1,1)}
+.toc a:hover .ph img{transform:scale(1.06)}
+
+.mask{background-image:var(--img);background-size:cover;background-position:var(--bp,50% 50%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-family:var(--f-disp);font-weight:900;line-height:.8;letter-spacing:-.04em;margin:0}
+
+.back{background:none;border:0;color:inherit;cursor:pointer;font:500 11px/1 var(--f-sans);letter-spacing:.22em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid currentColor}
+.dsk{display:none}
+html:not(.h) .keep > .tx.endc{position:absolute;inset:0;padding:0 16px}
+.chap{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 calc(var(--u)*4)}
+.chap a{display:grid;grid-template-columns:calc(var(--u)*5) 1fr auto;align-items:baseline;gap:calc(var(--u)*1.4);text-decoration:none;padding:calc(var(--u)*1.8) 0;border-bottom:1px solid rgba(241,232,216,.2)}
+.chap b{font:400 max(10px,calc(var(--u)*1.1))/1 var(--f-mono);color:var(--gold);letter-spacing:.1em}
+.chap span{font-family:var(--f-disp);font-style:italic;font-size:max(18px,calc(var(--u)*2.6))}
+.chap i{font:normal 400 max(10px,calc(var(--u)*1.1))/1 var(--f-mono);letter-spacing:.1em;opacity:.6}
+.chap a:hover span{color:#d33a45}
+.chap a:focus-visible{outline:1px solid var(--ivory);outline-offset:4px}
+html:not(.h) .chap{grid-template-columns:1fr}
+.rhythm{display:flex;gap:calc(var(--u)*.6)}
+.rhythm figure{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0;height:100%}
+.rhythm .ph{flex:1;min-height:0}
+.rhythm figcaption{white-space:nowrap;overflow:hidden;text-overflow:clip}
+html:not(.h) .rhythm{height:62vw;gap:4px}
+html:not(.h) .rhythm .ph{aspect-ratio:auto;height:auto}
+html:not(.h) .rhythm figcaption{display:none}
+.words-behind h2{z-index:1}.words-behind .ph{z-index:2}
+
+/* =========================================================
+   DESKTOP — horizontal canvas
+   ========================================================= */
+.h{--u:min(1vh,.68vw)}
+.h #story{position:relative}
+.h .stage{position:sticky;top:0;height:100vh;overflow:hidden}
+.h .track{display:flex;height:100%;will-change:transform}
+.h .panel{flex:0 0 auto;width:calc(var(--u)*var(--w,100));height:100%}
+.h .panel.vw{width:100vw}
+.h .a{position:absolute;left:var(--x,auto);top:var(--y,auto);right:var(--r,auto);bottom:var(--b,auto);width:var(--wd,auto);height:var(--ht,auto)}
+.h .px img{width:112%;max-width:none;margin-left:-6%;will-change:transform}
+.h .dsk{display:block}
+.h .mob{display:none}
+
+/* =========================================================
+   PHONE / NARROW — vertical editorial
+   ========================================================= */
+html:not(.h) .mast{padding-inline:16px}
+html:not(.h) .mast nav{gap:14px}
+html:not(.h) .mast nav a{font-size:10px;letter-spacing:.16em}
+html:not(.h) .mast .brand{font-size:10px;letter-spacing:.24em}
+html:not(.h) .mast .brand span{display:none}
+html:not(.h) .prog{left:0;right:0;bottom:auto;top:0}
+html:not(.h) .prog .row,html:not(.h) .prog .ticks{display:none}
+html:not(.h) .panel{display:flex;flex-direction:column;gap:22px;padding:18vw 16px 16vw}
+html:not(.h) .ph{aspect-ratio:var(--ar,4/5);width:100%}
+html:not(.h) .ph.bleed{width:calc(100% + 32px);margin-inline:-16px}
+html:not(.h) .m-r{align-self:flex-end;width:78%}
+html:not(.h) .m-l{align-self:flex-start;width:78%}
+html:not(.h) .m-n{width:62%}
+html:not(.h) .keep{min-height:100svh;padding:0 0 14vw;justify-content:flex-end}
+html:not(.h) .keep > .ph{position:absolute;inset:0;aspect-ratio:auto;width:auto;margin:0}
+html:not(.h) .keep > .ph img{object-position:var(--mop,var(--op,50% 50%))}
+html:not(.h) .keep > .tx{position:relative;z-index:1;padding:0 16px}
+html:not(.h) .keep > .tx.top{position:absolute;top:18vw;left:0;right:0}
+html:not(.h) .sheet{grid-template-columns:repeat(2,1fr)!important}
+html:not(.h) .cols{grid-template-columns:1fr 1fr!important;gap:28px 18px}
+html:not(.h) .toc a{grid-template-columns:1fr auto;gap:12px}
+html:not(.h) .toc .ph{grid-column:1/-1;height:44vw;order:-1}
+html:not(.h) .toc .n{display:none}
+html:not(.h) .grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px 14px}
+html:not(.h) .grid2 > .head{grid-column:1/-1}
+html:not(.h) .split{padding:0;gap:0}
+html:not(.h) .split > .half{position:relative;padding:22vw 16px 16vw;min-height:110vw;display:flex;flex-direction:column;justify-content:flex-end}
+html:not(.h) .split > .half > .ph{position:absolute;inset:0;aspect-ratio:auto;width:auto}
+html:not(.h) .split > .half > *:not(.ph){position:relative}
+html:not(.h) .mask{font-size:62vw!important}
+html:not(.h) .mask.long{font-size:23vw!important;line-height:1!important}
+html:not(.h) .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+html:not(.h) .cjk.a{display:none}
+
+/* motion */
+@media (prefers-reduced-motion:reduce){.hint i{animation:none;transform:scaleX(1)}.toc a .ph img{transition:none}}
+</style>
+
+<header class="mast">
+  <div class="brand">Shanghai Tang <span>上海灘</span></div>
+  <nav aria-label="Sections">
+    <a href="#intro" data-go="intro">Intro</a>
+    <a href="#concept" data-go="concept">The Concept</a>
+    <a href="#treatment" data-go="treatment">The Film</a>
+  </nav>
 </header>
 
-<div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
-
-<nav class="rail" aria-label="Chapters">
-  <ol>
-    <li><a href="#s1" data-n="01"><span>The idea</span></a></li>
-    <li><a href="#s2" data-n="02"><span>Setting the scene</span></a></li>
-    <li><a href="#s3" data-n="03"><span>Changing genres</span></a></li>
-    <li><a href="#s4" data-n="04"><span>The confession</span></a></li>
-    <li><a href="#s5" data-n="05"><span>Art direction</span></a></li>
-    <li><a href="#s6" data-n="06"><span>Every screen</span></a></li>
-  </ol>
-</nav>
-
-<div class="pager">
-  <span class="pager__count"><b class="js-current">01</b><i>/</i>06</span>
-  <button class="pager__btn js-prev" type="button" aria-label="Previous section">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
-  </button>
-  <button class="pager__btn js-next" type="button" aria-label="Next section">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-  </button>
+<div class="prog" aria-hidden="true">
+  <div class="row"><span id="secLabel">Intro</span><span id="folio">01 / 28</span></div>
+  <div class="bar"><div class="fill" id="fill"></div><div class="ticks" id="ticks"></div></div>
 </div>
 
-<main>
+<p class="credit">Produced by Inhaus Digital</p>
 
-  <!-- 01 / 06 ─────────────────────────────────────── THE IDEA -->
-  <section id="s1" class="chapter chapter--dark chapter--idea" aria-labelledby="s1-title">
-    <div class="wrap">
-      <p class="eyebrow r"><span>01 / 06</span><em>The idea</em></p>
+<main id="story">
+<div class="stage">
+<div class="track" id="track">
 
-      <div class="idea">
-        <div class="idea__type">
-          <h1 id="s1-title" class="display display--xl r" data-stagger>
-            <span>Our Food</span>
-            <span>Is the <i>Story</i></span>
-          </h1>
+<!-- ============ INTRO ============ -->
 
-          <div class="idea__copy r">
-            <p class="lede">At most cinemas, food plays a supporting role.</p>
-            <p class="lede lede--accent">At Cinemacity, it becomes the main character.</p>
-            <p>We meet a chef who speaks about food as though he were a celebrated film director discussing his latest work. Through his eyes, every cuisine becomes a different kind of cinema — dramatic, provocative or larger than life.</p>
-            <p>As the interview becomes increasingly intimate and cinematic, we discover one simple truth:</p>
-          </div>
+<!-- 01 cover -->
+<section class="panel k vw keep shade" id="intro" data-sec="intro" style="--sh:linear-gradient(90deg,rgba(10,9,9,.88) 0%,rgba(10,9,9,.45) 38%,rgba(10,9,9,0) 70%),linear-gradient(0deg,rgba(10,9,9,.55),rgba(10,9,9,0) 40%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:70% 30%;--mop:62% 30%" data-s=".04">
+    <img src="img/cover.webp" alt="A woman slipping a red silk Shanghai Tang blazer over a teal silk blouse in a lacquered dressing room" fetchpriority="high" decoding="async"><video muted loop playsinline preload="none" poster="img/cover.webp" data-src="video/cover.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a tx top dsk" style="--x:5%;--y:12%"><p class="mono" style="opacity:.7">No. 01 — Abu Dhabi — October 2026</p></div>
+  <div class="cjk a" style="--r:3.2%;--y:14%;z-index:2" aria-hidden="true">上海灘 · 阿布扎比</div>
+  <div class="a tx" style="--x:5%;--b:13%;z-index:2">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2.2);color:var(--ivory)">Opening film &nbsp;·&nbsp; Creative direction</p>
+    <h1 class="disp it t-xxl" style="line-height:.82">Shanghai<br>Tang</h1>
+    <p class="cap" style="margin-top:calc(var(--u)*2.6);color:var(--ivory)">Abu Dhabi</p>
+  </div>
+  <div class="a tx dsk" style="--r:5%;--b:13%;z-index:2"><p class="cap hint" style="color:var(--ivory)">Scroll <i></i></p></div>
+</section>
 
-          <blockquote class="truth r">
-            <p>Here, food doesn’t play a supporting role.</p>
-            <p><em>Our food is the story.</em></p>
-          </blockquote>
-        </div>
+<!-- 02 fashion food abu dhabi -->
+<section class="panel iv words-behind" data-sec="intro" style="--w:158">
+  <figure class="ph a rv m-l" style="--x:7%;--y:8%;--wd:16%;--ht:58%;--ar:3/4">
+    <img src="img/tri_1.webp" alt="Red silk lapel and a gold earring" decoding="async">
+  </figure>
+  <h2 class="disp it t-xl a" style="--x:4%;--y:61.5%">Fashion.</h2>
+  <p class="mono a dsk" style="--x:24%;--y:8%" ><span class="vt" style="display:inline-block">Fig. a — Silk, the blazer</span></p>
 
-        <div class="idea__visual r">
-          <figure class="frame frame--tall" data-img="chair" data-alt="An empty director's chair on a film set, lit from one side.">
-            <div class="frame__inner">
-              <span class="frame__tag">Opening image</span>
-              <p class="frame__desc">An empty director’s chair on a film set. Still, lit from one side, waiting.</p>
-              <span class="frame__note">Replace: <code>assets/images/chair.jpg</code></span>
-            </div>
-          </figure>
-          <p class="caption">The campaign’s first symbolic device — it introduces the chef-as-director before he appears.</p>
-          <ul class="spec">
-            <li><span>Format</span><b>Cinema pre-roll</b></li>
-            <li><span>Length</span><b>35 seconds</b></li>
-            <li><span>Bridge</span><b>At the cinema. At home.</b></li>
-          </ul>
-        </div>
-      </div>
+  <figure class="ph a rv m-r" style="--x:40%;--y:22%;--wd:16%;--ht:58%;--ar:3/4">
+    <img src="img/tri_2.webp" alt="A translucent har gow dumpling lifted with jade chopsticks" decoding="async">
+  </figure>
+  <h2 class="disp it t-xl a" style="--x:43.5%;--y:78%">Food.</h2>
+  <p class="mono a dsk" style="--x:57%;--y:22%"><span class="vt" style="display:inline-block">Fig. b — Har gow, jade chopsticks</span></p>
+
+  <figure class="ph a rv m-l" style="--x:76%;--y:6%;--wd:16%;--ht:58%;--ar:3/4">
+    <img src="img/tri_dune_n.webp" alt="Nation Towers from the Corniche at sunset" decoding="async">
+  </figure>
+  <h2 class="disp it t-xl a" style="--x:56%;--y:61.5%">Abu Dhabi.</h2>
+  <p class="mono a dsk" style="--x:93%;--y:6%"><span class="vt" style="display:inline-block">Fig. c — Corniche, 17:40</span></p>
+</section>
+
+<!-- 03 proposition -->
+<section class="panel k" data-sec="intro" style="--w:138">
+  <figure class="ph a rv m-n" style="--x:6%;--y:10%;--wd:28%;--ht:80%;--ar:4/5">
+    <img src="img/prop.webp" alt="Black and white: a woman retouching her red lipstick in a mirror" decoding="async">
+  </figure>
+  <p class="cap a" style="--x:42%;--y:12%">The question</p>
+  <p class="disp t-m a" style="--x:42%;--y:20%;--wd:52%">What if an opening film moved at <em style="color:#d33a45">two speeds?</em> The calm of dressing for dinner. The rush of a restaurant getting ready.</p>
+  <p class="mono a" style="--x:42%;--b:12%;--wd:46%;opacity:.55">Classic. Refined. Rooted in fine dining.</p>
+</section>
+
+<!-- 04 the lens -->
+<section class="panel iv" data-sec="intro" style="--w:232">
+  <div class="a" style="--x:4%;--y:12%;--wd:25%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The lens</p>
+    <h2 class="disp t-l">Fashion is how we enter.</h2>
+    <p class="body" style="margin-top:calc(var(--u)*3)">The wardrobe comes directly from Shanghai Tang in China. The clothes come first, and the restaurant is discovered through them.</p>
+  </div>
+  <div class="a sheet" style="--x:33%;--y:14%;--wd:63%;grid-template-columns:repeat(5,1fr);background:#e6dcc9">
+    <div class="edge" style="color:var(--red)"><span>SHANGHAI TANG — COLLECTION REFERENCE</span><span>→ 01–05</span></div>
+    <figure class="frame"><div class="ph" style="aspect-ratio:3/4"><img src="img/col1.webp" alt="Shanghai Tang campaign: model wrapped in printed silk scarves on red" loading="lazy" decoding="async"></div><figcaption style="color:var(--red)">01</figcaption></figure>
+    <figure class="frame"><div class="ph" style="aspect-ratio:3/4"><img src="img/col2.webp" alt="Shanghai Tang campaign: black dress and sculptural headpiece on red" loading="lazy" decoding="async"></div><figcaption style="color:var(--red)">02</figcaption></figure>
+    <figure class="frame"><div class="ph" style="aspect-ratio:3/4"><img src="img/col3.webp" alt="Shanghai Tang campaign: model in red qipao among flowers" loading="lazy" decoding="async"></div><figcaption style="color:var(--red)">03 ✓</figcaption>
+      <svg class="circle" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><ellipse cx="50" cy="48" rx="47" ry="45" transform="rotate(-3 50 50)"/><ellipse cx="51" cy="50" rx="45" ry="47" transform="rotate(4 50 50)" style="opacity:.55"/></svg></figure>
+    <figure class="frame"><div class="ph" style="aspect-ratio:3/4"><img src="img/col4.webp" alt="Shanghai Tang campaign: green suit against white wall and rock" loading="lazy" decoding="async"></div><figcaption style="color:var(--red)">04</figcaption></figure>
+    <figure class="frame"><div class="ph" style="aspect-ratio:3/4"><img src="img/col5.webp" alt="Shanghai Tang campaign: gold dress on a striped chair" loading="lazy" decoding="async"></div><figcaption style="color:var(--red)">05</figcaption></figure>
+  </div>
+  <p class="mono a" style="--x:33%;--b:9%">Colour as set. Silk as light. Attitude as direction.</p>
+</section>
+
+<!-- 05 contents -->
+<section class="panel k" data-sec="intro" style="--w:132">
+  <p class="cap a" style="--x:6%;--y:11%">Contents — The concept</p>
+  <div class="toc a" style="--x:6%;--y:20%;--wd:88%">
+    <a href="#concept" data-go="concept">
+      <span class="n">—</span>
+      <span class="ti"><span class="disp t-l">Dressed for Dinner</span><span class="disp it t-s" style="opacity:.75">Two tempos, one evening.</span></span>
+      <span class="pg" data-page="concept">p. 06</span>
+      <span class="ph"><img src="img/idx.webp" alt="" loading="lazy" decoding="async" style="--op:50% 45%"></span>
+    </a>
+  </div>
+  <ol class="chap a" style="--x:6%;--y:58%;--wd:88%">
+    <li><a href="#idea" data-go="idea"><b>i</b><span>The idea</span><i data-page="idea">p. 07</i></a></li>
+    <li><a href="#ready" data-go="ready"><b>ii</b><span>Getting ready</span><i data-page="ready">p. 09</i></a></li>
+    <li><a href="#arrival" data-go="arrival"><b>iii</b><span>The arrival</span><i data-page="arrival">p. 13</i></a></li>
+    <li><a href="#dinner" data-go="dinner"><b>iv</b><span>The dinner</span><i data-page="dinner">p. 14</i></a></li>
+    <li><a href="#pause" data-go="pause"><b>v</b><span>The pause</span><i data-page="pause">p. 15</i></a></li>
+    <li><a href="#treatment" data-go="treatment"><b>vi</b><span>The film</span><i data-page="treatment">p. 18</i></a></li>
+  </ol>
+</section>
+
+<!-- ============ CONCEPT ============ -->
+
+<!-- 06 title -->
+<section class="panel k" id="concept" data-sec="concept" style="--w:196">
+  <h2 class="mask long a" style="--x:3%;--y:10%;font-size:calc(var(--u)*27);line-height:.9;--img:url(img/mask.webp);--bp:50% 50%" aria-label="Dressed">Dressed</h2>
+  <div class="a" style="--x:3.6%;--y:35%;--wd:56%">
+    <h2 class="disp it t-xl" style="line-height:.9">for Dinner</h2>
+    <p class="disp it t-s" style="margin-top:calc(var(--u)*3);max-width:24ch">Two tempos, one evening.</p>
+    <p class="cap" style="margin-top:calc(var(--u)*4)">The creative concept</p>
+  </div>
+  <figure class="ph a rv m-r" style="--r:4%;--y:10%;--wd:19%;--ht:80%;--ar:3/4">
+    <img src="img/title_strip.webp" alt="A red silk blazer waiting on a wooden valet stand" loading="lazy" decoding="async">
+  </figure>
+  <p class="mono a dsk" style="--r:24.5%;--y:10%"><span class="vt" style="display:inline-block">Fig. 01 — Waiting, 19:40</span></p>
+  <div class="cjk a" style="--r:24.6%;--b:10%;opacity:.75" aria-hidden="true">晚宴</div>
+</section>
+
+<!-- 07 idea -->
+<section class="panel iv" id="idea" data-sec="concept" style="--w:124">
+  <p class="cap a" style="--x:10%;--y:14%">The idea</p>
+  <div class="a" style="--x:10%;--y:24%;--wd:78%;display:grid;gap:calc(var(--u)*3.2)">
+    <p class="disp t-m">Before a great dinner, everyone gets ready.</p>
+    <p class="disp t-m">She dresses in Shanghai Tang, slowly.</p>
+    <p class="disp it t-m rd">The restaurant gets ready for her, fast.</p>
+  </div>
+  <p class="mono a" style="--x:10%;--b:10%">A fashion film that moves between the calm of a ritual and the speed of a kitchen.</p>
+</section>
+
+<!-- 08 two tempos -->
+<section class="panel iv" data-sec="concept" style="--w:212">
+  <p class="cap a" style="--x:4%;--y:8%">Two tempos</p>
+  <figure class="ph a rv m-l" style="--x:4%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/calm.webp" alt="Black and white: a woman applying lipstick at a vanity mirror" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/calm.webp" data-src="video/calm.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a" style="--x:30.5%;--y:58%;--wd:17%">
+    <h2 class="disp it t-xl">Slow.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">The ritual. Locked off. Long takes.</p>
+  </div>
+  <div class="a dsk" style="--x:50%;--y:14%;--wd:1px;--ht:76%;background:currentColor;opacity:.25"></div>
+  <div class="a" style="--x:53%;--y:14%;--wd:17%">
+    <h2 class="disp it t-xl rd">Fast.</h2>
+    <p class="mono" style="margin-top:calc(var(--u)*1.6)">The preparation. Precise. Rhythmic.</p>
+  </div>
+  <figure class="ph a rv m-r" style="--x:72%;--y:14%;--wd:24%;--ht:76%;--ar:3/4">
+    <img src="img/fast.webp" alt="Overhead mise en place: bowls of spring onion and chilli, a chef's hands blurred with a cleaver" loading="lazy" decoding="async">
+  </figure>
+</section>
+
+<!-- 09 getting ready -->
+<section class="panel k keep shade" id="ready" data-sec="concept" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.7),rgba(10,9,9,0) 48%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:40% 40%;--mop:30% 40%" data-s=".05">
+    <img src="img/ready.webp" alt="A woman in a teal silk blouse applying red lipstick at a brass vanity mirror, a red blazer waiting beside her" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/ready.webp" data-src="video/ready.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a tx" style="--x:4.5%;--b:8%;--wd:62%;z-index:2">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">Getting ready</p>
+    <h2 class="disp t-l">She takes <em>her time.</em></h2>
+  </div>
+  <p class="mono a dsk" style="--r:4%;--b:9%;z-index:2;opacity:.75">Silk. Buttons. Earrings. Lipstick.</p>
+</section>
+
+<!-- 10 the edit -->
+<section class="panel k" data-sec="concept" style="--w:236">
+  <div class="a" style="--x:4%;--y:10%;--wd:34%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The edit</p>
+    <h2 class="disp t-l">The ritual, cut <em>against the rush.</em></h2>
+    <p class="body" style="margin-top:calc(var(--u)*2.6)">Long, still takes of her getting ready. Bursts of a few frames from the kitchen and the dining room. The faster they move, the more precious her evening feels.</p>
+  </div>
+  <div class="a rhythm" style="--x:4%;--y:54%;--wd:92%;--ht:34%">
+    <figure class="t" style="flex:6"><div class="ph"><img src="img/r1.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Her — 06s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r2.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r3.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.3s</figcaption></figure>
+    <figure class="t" style="flex:5"><div class="ph"><img src="img/r4.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Her — 05s</figcaption></figure>
+    <figure style="flex:1.1"><div class="ph"><img src="img/r5.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono rd">0.4s</figcaption></figure>
+    <figure class="t" style="flex:7"><div class="ph"><img src="img/r6.webp" alt="" loading="lazy" decoding="async"></div><figcaption class="mono">Arrival — 07s</figcaption></figure>
+  </div>
+  <p class="mono a dsk" style="--x:4%;--y:50%;opacity:.55">Frame widths drawn to shot length</p>
+</section>
+
+<!-- 11 the restaurant -->
+<section class="panel k keep shade" data-sec="concept" style="--w:176;--sh:linear-gradient(0deg,rgba(10,9,9,.72),rgba(10,9,9,0) 50%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:50% 45%;--mop:76% 40%" data-s=".05">
+    <img src="img/fire.webp" alt="A chef tossing a flaming wok in the kitchen" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/fire.webp" data-src="video/fire.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a tx dr" style="--x:4.5%;--b:8%;z-index:2" data-s="-.04">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">Meanwhile, the restaurant</p>
+    <h2 class="disp it t-xl" style="line-height:.88">Everything<br>else moves fast.</h2>
+  </div>
+</section>
+
+<!-- 12 preparation inserts -->
+<section class="panel bu" data-sec="concept" style="--w:216">
+  <div class="a" style="--x:4%;--y:10%;--wd:20%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Mise en place</p>
+    <h2 class="disp t-m">Fast, <em>never chaotic.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">The kitchen and the dining room move like choreography. Speed ramps, match cuts, clean precise moves.</p>
+  </div>
+  <div class="a strips grid3" style="--x:27%;--y:0;--wd:69%;--ht:100%">
+    <figure class="ph a rv" style="--x:0;--y:8%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i1.webp" alt="Black and white: a white-gloved hand placing jade chopsticks" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:35%;--y:14%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i2.webp" alt="Black and white: a cleaver blurring through spring onions and chillies" loading="lazy" decoding="async"></figure>
+    <figure class="ph a rv" style="--x:70%;--y:4%;--wd:30%;--ht:78%;--ar:3/4"><img src="img/i3.webp" alt="Hand-pleated xiaolongbao in bamboo steamers" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/i3.webp" data-src="video/i3.mp4" aria-hidden="true"></video></figure>
+  </div>
+  <p class="mono a dsk" style="--x:27%;--y:88%;opacity:.65">The table</p>
+  <p class="mono a dsk" style="--x:51.15%;--y:94%;opacity:.65">The knife</p>
+  <p class="mono a dsk" style="--x:75.3%;--y:84%;opacity:.65">The fold</p>
+</section>
+
+<!-- 13 arrival -->
+<section class="panel k" id="arrival" data-sec="concept" style="--w:204">
+  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">The room is ready. The pace drops at once.</p>
+  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 24%" data-s=".05">
+    <img src="img/arrival.webp" alt="The couple, she in a red silk suit and he in a beige suit, walking into the empty, prepared dining room" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/arrival.webp" data-src="video/arrival.mp4" aria-hidden="true"></video>
+  </figure>
+  <h2 class="disp t-l a" style="--x:4%;--b:5%">They arrive. <em>Everything slows.</em></h2>
+</section>
+
+<!-- 14 the dinner: three themes -->
+<section class="panel iv" id="dinner" data-sec="concept" style="--w:236">
+  <div class="a" style="--x:4%;--y:10%;--wd:22%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">The dinner</p>
+    <h2 class="disp t-l">Course by course, <em>at her pace.</em></h2>
+    <p class="body" style="margin-top:calc(var(--u)*2.6)">Each course is a short burst back into the kitchen, then the dish lands in calm. At the table, the brief's three territories come together.</p>
+  </div>
+  <figure class="a rv" style="--x:30%;--y:9%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th1.webp" alt="Her silhouette at the dinner table, red silk against the dark room" loading="lazy" decoding="async"></div>
+    <figcaption><span class="cap">01 — Silhouettes</span><span class="disp it t-s" style="display:block;margin-top:6px">Fashion and food share shape and proportion.</span></figcaption>
+  </figure>
+  <figure class="a rv" style="--x:53%;--y:15%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th2.webp" alt="A gloved hand placing jade chopsticks with precision" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/th2.webp" data-src="video/th2.mp4" aria-hidden="true"></video></div>
+    <figcaption><span class="cap">02 — Tailored taste</span><span class="disp it t-s" style="display:block;margin-top:6px">Precision on both sides of the pass.</span></figcaption>
+  </figure>
+  <figure class="a rv" style="--x:76%;--y:9%;--wd:20%;--ht:66%;margin:0;display:flex;flex-direction:column;gap:10px">
+    <div class="ph" style="flex:1;--ar:3/4"><img src="img/th3.webp" alt="A red silk sleeve and gold bangle as jade chopsticks lift a har gow over a porcelain spoon" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/th3.webp" data-src="video/th3.mp4" aria-hidden="true"></video></div>
+    <figcaption><span class="cap">03 — Sensory depths</span><span class="disp it t-s" style="display:block;margin-top:6px">Silk, porcelain, glaze, steam.</span></figcaption>
+  </figure>
+</section>
+
+<!-- 15 the pause -->
+<section class="panel k keep shade" id="pause" data-sec="concept" style="--w:182;--sh:linear-gradient(90deg,rgba(10,9,9,.7),rgba(10,9,9,0) 50%)">
+  <figure class="ph a px" style="--x:0;--y:0;--wd:100%;--ht:100%;--op:60% 40%;--mop:68% 40%" data-s=".05">
+    <img src="img/pause.webp" alt="Alone in the powder room, she retouches her red lipstick in an antique mirror" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/pause.webp" data-src="video/pause.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a tx dr" style="--x:4.5%;--b:9%;--wd:40%;z-index:2" data-s="-.04">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2);color:var(--ivory)">The pause</p>
+    <h2 class="disp t-l">Mid-dinner, <em>she steps away.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">The powder room. She retouches her lips. The quietest moment of the film.</p>
+  </div>
+</section>
+
+<!-- 16 one stroke -->
+<section class="panel k" data-sec="concept" style="--w:190">
+  <figure class="ph a rv m-l" style="--x:4%;--y:10%;--wd:28%;--ht:80%;--ar:4/5">
+    <img src="img/lips.webp" alt="Red-toned close-up: lipstick drawn across her lips" loading="lazy" decoding="async">
+  </figure>
+  <figure class="ph a rv m-r" style="--x:34%;--y:10%;--wd:36%;--ht:80%;--ar:4/5">
+    <img src="img/glaze.webp" alt="A brush drawing a stroke of red glaze across sliced Peking duck" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/glaze.webp" data-src="video/glaze.mp4" aria-hidden="true"></video>
+  </figure>
+  <div class="a" style="--x:74%;--y:12%;--wd:22%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*2)">Match cut</p>
+    <h2 class="disp t-m">One stroke. <em>Two rituals.</em></h2>
+    <p class="mono" style="margin-top:calc(var(--u)*2.4);opacity:.75">Her lipstick cuts to a chef's brush of glaze. Then back to the table.</p>
+  </div>
+</section>
+
+<!-- 17 back to the table -->
+<section class="panel k" data-sec="concept" style="--w:204">
+  <p class="cap a" style="--r:4%;--b:7.5%;text-align:right;max-width:26ch">The last course arrives. A look between them.</p>
+  <figure class="ph a px rv bleed" style="--x:0;--y:12%;--wd:100%;--ht:66%;--ar:4/3;--op:50% 55%" data-s=".05">
+    <img src="img/table.webp" alt="The couple seated at a black marble table in the dark, empty restaurant" loading="lazy" decoding="async"><video muted loop playsinline preload="none" poster="img/table.webp" data-src="video/table.mp4" aria-hidden="true"></video>
+  </figure>
+  <h2 class="disp t-l a" style="--x:4%;--b:5%">Back to <em>the evening.</em></h2>
+</section>
+
+<!-- 18 treatment -->
+<section class="panel ja" id="treatment" data-sec="film" style="--w:236">
+  <div class="a" style="--x:4%;--y:9%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*1.8)">Treatment</p>
+    <h2 class="disp t-l">Dressed for Dinner,<br><em>on film.</em></h2>
+  </div>
+  <div class="a cols" style="--x:4%;--y:42%;--wd:54%;grid-template-columns:repeat(4,1fr)">
+    <div class="col"><h3>Camera</h3><p>Her: locked off, symmetrical.<br><em>The restaurant: fluid, precise, fast.</em></p></div>
+    <div class="col"><h3>Light</h3><p>Warm, low, chiaroscuro.<br><em>Like a still life.</em></p></div>
+    <div class="col"><h3>Sound</h3><p>Silk, porcelain, glass.<br><em>Sparse music.</em></p></div>
+    <div class="col"><h3>Cast</h3><p>Two models in Shanghai Tang.<br><em>The kitchen and service team.</em></p></div>
+  </div>
+  <p class="mono a" style="--x:4%;--b:9%;--wd:52%;opacity:.7">One location. One shoot day. Inside the restaurant. Closes on a single card: Coming soon.</p>
+  <div class="a" style="--x:63%;--y:9%;--wd:30%">
+    <p class="cap" style="margin-bottom:calc(var(--u)*1.6)">Details — index</p>
+    <div class="idx">
+      <figure><div class="ph"><img src="img/x1.webp" alt="" loading="lazy" decoding="async"></div><figcaption>01 Earring</figcaption></figure>
+      <figure><div class="ph"><img src="img/x2.webp" alt="" loading="lazy" decoding="async"></div><figcaption>02 Silk</figcaption></figure>
+      <figure><div class="ph"><img src="img/x3.webp" alt="" loading="lazy" decoding="async"></div><figcaption>03 Mise en place</figcaption></figure>
+      <figure><div class="ph"><img src="img/x4.webp" alt="" loading="lazy" decoding="async"></div><figcaption>04 Crystal</figcaption></figure>
+      <figure><div class="ph"><img src="img/x5.webp" alt="" loading="lazy" decoding="async"></div><figcaption>05 Glaze</figcaption></figure>
+      <figure><div class="ph"><img src="img/x6.webp" alt="" loading="lazy" decoding="async"></div><figcaption>06 Compact</figcaption></figure>
+      <figure><div class="ph"><img src="img/x7.webp" alt="" loading="lazy" decoding="async"></div><figcaption>07 The table</figcaption></figure>
+      <figure><div class="ph"><img src="img/x8.webp" alt="" loading="lazy" decoding="async"></div><figcaption>08 Vanity</figcaption></figure>
+      <figure><div class="ph"><img src="img/x9.webp" alt="" loading="lazy" decoding="async"></div><figcaption>09 Fire</figcaption></figure>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- 02 / 06 ───────────────────────────── SETTING THE SCENE -->
-  <section id="s2" class="chapter chapter--dark" aria-labelledby="s2-title">
-    <div class="wrap">
-      <header class="chead r">
-        <p class="eyebrow"><span>02 / 06</span><em>Setting the scene</em></p>
-        <h2 id="s2-title" class="display">Setting the scene</h2>
-        <p class="tc">Storyboard chapter 1 · <span>00:00 — 00:12</span></p>
-      </header>
+<!-- 19 end card -->
+<section class="panel k vw keep" id="fin" data-sec="fin">
+  <figure class="ph a" style="--x:0;--y:0;--wd:100%;--ht:100%;opacity:.22;--op:50% 50%">
+    <img src="img/end.webp" alt="" loading="lazy" decoding="async">
+  </figure>
+  <div class="a tx endc" style="--x:0;--y:0;--wd:100%;--ht:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2;text-align:center">
+    <p class="cap" style="color:var(--ivory);letter-spacing:.5em;font-size:max(12px,calc(var(--u)*1.6))">Coming soon</p>
+  </div>
+  <div class="a tx" style="--x:0;--b:13%;--wd:100%;z-index:2;text-align:center">
+    <button class="back" type="button" data-go="intro">Back to the cover</button>
+  </div>
+</section>
 
-      <div class="beats">
-
-        <article class="beat r">
-          <figure class="frame frame--wide" data-img="shot-01" data-alt="An empty director's chair on a film set; the chef enters frame and takes his place.">
-            <div class="frame__inner">
-              <span class="frame__tag">Shot 01</span>
-              <p class="frame__desc">The director arrives — the chef enters frame and takes his place in the chair.</p>
-              <span class="frame__note">Replace: <code>assets/images/shot-01.jpg</code></span>
-            </div>
-          </figure>
-          <div class="beat__text">
-            <p class="shot-label">Shot 1 — The director arrives</p>
-            <p>An empty director’s chair sits on a film set. Our chef enters frame and takes his place. He feels less like a traditional chef and more like a celebrated auteur preparing to discuss his latest masterpiece.</p>
-            <div class="line line--inline">
-              <p class="line__who">Interviewer, off camera</p>
-              <p class="line__said">“Chef, if your food were a movie, what kind of story would it tell?”</p>
-            </div>
-          </div>
-        </article>
-
-        <article class="beat beat--flip r">
-          <figure class="frame frame--wide" data-img="shot-02" data-alt="A composed documentary interview shot; the chef leans forward.">
-            <div class="frame__inner">
-              <span class="frame__tag">Shot 02</span>
-              <p class="frame__desc">Composed documentary interview. Static. The chef leans forward into the light.</p>
-              <span class="frame__note">Replace: <code>assets/images/shot-02.jpg</code></span>
-            </div>
-          </figure>
-          <div class="beat__text">
-            <p class="shot-label">Shot 2 — Italian drama</p>
-            <p>In a composed documentary interview shot, the chef leans forward.</p>
-          </div>
-        </article>
-
-        <div class="say r">
-          <div class="line line--chef line--big">
-            <p class="line__who">Chef</p>
-            <p class="line__said">“Dramatic. Like a Fellini film.”</p>
-          </div>
-          <div class="cutto">
-            <p class="cutto__label">Cut to — expressive macro</p>
-            <div class="strip">
-              <figure class="frame frame--macro" data-img="macro-it-01" data-alt="Pizza dough flying through the air.">
-                <div class="frame__inner"><span class="frame__tag">01</span><p class="frame__desc">Pizza dough flying through the air</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-it-02" data-alt="Flour catching the light.">
-                <div class="frame__inner"><span class="frame__tag">02</span><p class="frame__desc">Flour catching the light</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-it-03" data-alt="Parmigiano falling over pasta.">
-                <div class="frame__inner"><span class="frame__tag">03</span><p class="frame__desc">Parmigiano falling over pasta</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-it-04" data-alt="Sauce being poured.">
-                <div class="frame__inner"><span class="frame__tag">04</span><p class="frame__desc">Sauce being poured</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-it-05" data-alt="Pizza being sliced.">
-                <div class="frame__inner"><span class="frame__tag">05</span><p class="frame__desc">Pizza being sliced</p></div>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 03 / 06 ─────────────────────────────── CHANGING GENRES -->
-  <section id="s3" class="chapter chapter--dark" aria-labelledby="s3-title">
-    <div class="wrap">
-      <header class="chead r">
-        <p class="eyebrow"><span>03 / 06</span><em>Changing genres</em></p>
-        <h2 id="s3-title" class="display">Changing genres</h2>
-        <p class="tc">Storyboard chapter 2 · <span>00:12 — 00:25</span></p>
-      </header>
-
-      <div class="beats">
-
-        <article class="beat r">
-          <figure class="frame frame--wide" data-img="shot-03" data-alt="A closer, slightly off-balance composition of the chef speaking energetically with his hands.">
-            <div class="frame__inner">
-              <span class="frame__tag">Shot 03</span>
-              <p class="frame__desc">Closer. Slightly off-balance. The camera has started to take an interest.</p>
-              <span class="frame__note">Replace: <code>assets/images/shot-03.jpg</code></span>
-            </div>
-          </figure>
-          <div class="beat__text">
-            <p class="shot-label">Shot 3 — Something unexpected</p>
-            <p>We return to the chef, but the camera has changed. The composition is closer and slightly off-balance. He speaks energetically with his hands.</p>
-          </div>
-        </article>
-
-        <div class="say r">
-          <div class="line line--chef line--big">
-            <p class="line__who">Chef</p>
-            <p class="line__said">“Sometimes, spicy — with the attitude of Deadpool.”</p>
-          </div>
-          <div class="cutto">
-            <p class="cutto__label">Fast, playful</p>
-            <div class="strip">
-              <figure class="frame frame--macro" data-img="macro-mx-01" data-alt="Tacos being assembled.">
-                <div class="frame__inner"><span class="frame__tag">01</span><p class="frame__desc">Tacos being assembled</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-mx-02" data-alt="Nachos loaded with fresh ingredients.">
-                <div class="frame__inner"><span class="frame__tag">02</span><p class="frame__desc">Nachos loaded with fresh ingredients</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-mx-03" data-alt="Sauces landing.">
-                <div class="frame__inner"><span class="frame__tag">03</span><p class="frame__desc">Sauces landing</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-mx-04" data-alt="A sandwich being pressed and sliced.">
-                <div class="frame__inner"><span class="frame__tag">04</span><p class="frame__desc">A sandwich pressed and sliced</p></div>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <article class="beat beat--flip r">
-          <figure class="frame frame--wide" data-img="shot-04" data-alt="A low or Dutch angle; the chef opens his arms as if describing an epic production.">
-            <div class="frame__inner">
-              <span class="frame__tag">Shot 04</span>
-              <p class="frame__desc">Low or Dutch angle. He opens his arms as if describing an epic production.</p>
-              <span class="frame__note">Replace: <code>assets/images/shot-04.jpg</code></span>
-            </div>
-          </figure>
-          <div class="beat__text">
-            <p class="shot-label">Shot 4 — Larger than life</p>
-            <p>The camera returns at a low or Dutch angle. The chef appears more theatrical now, opening his arms as if describing an epic production.</p>
-          </div>
-        </article>
-
-        <div class="say r">
-          <div class="line line--chef line--big">
-            <p class="line__who">Chef</p>
-            <p class="line__said">“And sometimes… larger than life. Like the greatest Hollywood stories.”</p>
-          </div>
-          <div class="cutto">
-            <p class="cutto__label">Cut to — elevated American classics</p>
-            <div class="strip">
-              <figure class="frame frame--macro" data-img="macro-us-01" data-alt="A cheeseburger built layer by layer.">
-                <div class="frame__inner"><span class="frame__tag">01</span><p class="frame__desc">A cheeseburger built layer by layer</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-us-02" data-alt="Cheese melting.">
-                <div class="frame__inner"><span class="frame__tag">02</span><p class="frame__desc">Cheese melting</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-us-03" data-alt="Popcorn exploding.">
-                <div class="frame__inner"><span class="frame__tag">03</span><p class="frame__desc">Popcorn exploding</p></div>
-              </figure>
-              <figure class="frame frame--macro" data-img="macro-us-04" data-alt="Mustard crossing a hot dog.">
-                <div class="frame__inner"><span class="frame__tag">04</span><p class="frame__desc">Mustard crossing a hot dog</p></div>
-              </figure>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 04 / 06 ──────────────────────────────── THE CONFESSION -->
-  <section id="s4" class="chapter chapter--dark chapter--confession" aria-labelledby="s4-title">
-    <div class="wrap">
-      <header class="chead r">
-        <p class="eyebrow"><span>04 / 06</span><em>The confession</em></p>
-        <h2 id="s4-title" class="display">The confession</h2>
-        <p class="tc">Storyboard chapter 3 · <span>00:25 — 00:35</span></p>
-      </header>
-
-      <div class="confess">
-        <div class="beat beat--confess r">
-          <figure class="frame frame--wide" data-img="shot-05" data-alt="The chef moves close to the lens; the framing is intimate, strange and compelling.">
-            <div class="frame__inner">
-              <span class="frame__tag">Shot 05</span>
-              <p class="frame__desc">The camera becomes his confidant — intimate, strange, compelling. He speaks calmly and with complete certainty.</p>
-              <span class="frame__note">Replace: <code>assets/images/shot-05.jpg</code></span>
-            </div>
-          </figure>
-          <div class="beat__text">
-            <p class="shot-label">Shot 5 — The camera becomes his confidant</p>
-            <p>The chef moves closer to the lens, as though he is about to reveal a secret. The visual language is now intimate, strange and compelling.</p>
-            <div class="line line--chef line--big">
-              <p class="line__who">Chef</p>
-              <p class="line__said">“Here… food doesn’t play a supporting role.”</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="say say--close r">
-          <p class="stage">A final sequence brings the different cuisines together. Each dish is presented as the star of its own film.</p>
-          <div class="line line--chef line--big">
-            <p class="line__who">Chef, VO</p>
-            <p class="line__said">“Our food is the story.”</p>
-          </div>
-        </div>
-
-        <div class="endframe r">
-          <p class="endframe__tag">End frame</p>
-          <p class="endframe__brand">Cinemacity</p>
-          <p class="endframe__line">Our Food Is the Story</p>
-          <p class="endframe__sub">At the cinema. At home.</p>
-        </div>
-
-        <aside class="note r">
-          <p class="note__label">Performance and pacing</p>
-          <p>The pause after “Here…” matters. The moment should feel conspiratorial rather than staged. Let the chef move toward the camera instead of delivering a conventional brand line from his chair. The campaign line is the resolution, not an extra slogan appended afterward.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- 05 / 06 ───────────────────────────────── ART DIRECTION -->
-  <section id="s5" class="chapter chapter--light" aria-labelledby="s5-title">
-    <div class="wrap">
-      <header class="chead r">
-        <p class="eyebrow"><span>05 / 06</span><em>Art direction</em></p>
-        <h2 id="s5-title" class="display">Art direction</h2>
-        <p class="tc">The actor, the camera and the food all share one authored visual world.</p>
-      </header>
-
-      <div class="art">
-
-        <div class="art__block r">
-          <h3 class="h3">The chef as auteur</h3>
-          <p class="art__intro">Cast an actor, not one of Cinemacity’s working chefs. He should feel like a creative genius: part chef, part film director and part artist. He is eccentric and expressive, but never comic or theatrical for its own sake.</p>
-          <ul class="ticks">
-            <li>A chef’s jacket worn slightly open</li>
-            <li>Kitchen tongs tucked into the jacket pocket like a director’s pen</li>
-            <li>Hair that looks messy, but deliberately arranged</li>
-            <li>Artist’s trousers carrying subtle, intentional traces of paint</li>
-            <li>Expressive hands, quiet confidence and controlled eccentricity</li>
-            <li>Paint marks must read as artistic, never unhygienic; the jacket stays pristine enough to preserve food quality cues</li>
-          </ul>
-        </div>
-
-        <div class="art__block art__block--camera r">
-          <h3 class="h3">A camera that becomes curious</h3>
-          <ol class="arc">
-            <li><span class="arc__n">01</span><span class="arc__s">Composed interview</span></li>
-            <li><span class="arc__n">02</span><span class="arc__s">Closer framing</span></li>
-            <li><span class="arc__n">03</span><span class="arc__s">Dutch or low angle</span></li>
-            <li><span class="arc__n">04</span><span class="arc__s">Intimate confession</span></li>
-          </ol>
-          <p class="art__intro">The camera is not simply recording him. It becomes increasingly fascinated by him until the lens feels like his confidant. Each return to the interview must visibly advance this relationship.</p>
-        </div>
-
-        <div class="art__block r">
-          <h3 class="h3">Food as the star</h3>
-          <ul class="ticks">
-            <li>Avoid predictable menu photography and passive beauty shots</li>
-            <li>Show ingredients in extreme macro: texture, freshness, steam, flame and movement</li>
-            <li>Choose the single most expressive action for each dish</li>
-            <li>Use precise, sculptural lighting that makes familiar food feel monumental</li>
-            <li>The images must communicate restaurant-grade preparation rather than standard cinema concessions</li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- 06 / 06 ─────────────────────── ONE PRODUCTION, EVERY SCREEN -->
-  <section id="s6" class="chapter chapter--dark chapter--final" aria-labelledby="s6-title">
-    <div class="wrap">
-      <header class="chead r">
-        <p class="eyebrow"><span>06 / 06</span><em>One production, every screen</em></p>
-        <h2 id="s6-title" class="display">One production,<br>every screen</h2>
-        <p class="tc">How the idea becomes a flexible campaign system.</p>
-      </header>
-
-      <div class="grid">
-        <article class="card r">
-          <p class="card__n">01</p>
-          <h3 class="card__t">Cinema pre-roll</h3>
-          <p>The complete 35-second story, designed for the scale, sound and visual impact of the cinema screen.</p>
-        </article>
-        <article class="card r">
-          <p class="card__n">02</p>
-          <h3 class="card__t">Social awareness</h3>
-          <p>Short cuisine-led edits in vertical and square formats. Each version can focus on a different cinematic genre, with a direct dine-in or delivery message.</p>
-        </article>
-        <article class="card r">
-          <p class="card__n">03</p>
-          <h3 class="card__t">Organic social</h3>
-          <p>Macro food sequences, individual dish stories, character moments with the chef and behind-the-scenes content that extends the campaign world.</p>
-        </article>
-        <article class="card r">
-          <p class="card__n">04</p>
-          <h3 class="card__t">Interior corridor screens</h3>
-          <p>Soundless food films built around expressive action shots, bold typography and the campaign line. Spoken interventions are replaced by graphic statements.</p>
-          <p class="card__words"><span>Dramatic.</span><span>Spicy.</span><span>Larger than life.</span><span>Our food is the story.</span></p>
-        </article>
-      </div>
-
-      <p class="closing r">This is not only one pre-roll film. It is a recognisable content system that can move from a cinema screen to paid social, organic content and silent interior displays without losing the central idea.</p>
-
-      <div class="outro r">
-        <p class="outro__brand">Cinemacity</p>
-        <p class="outro__line">Our Food Is the Story</p>
-        <p class="outro__sub">At the cinema. At home.</p>
-      </div>
-    </div>
-
-    <footer class="foot">
-      <span>Campaign concept presentation</span>
-      <span>Prepared by INHAUS Digital</span>
-    </footer>
-  </section>
-
+</div>
+</div>
 </main>
 
-<script src="assets/js/app.js" defer></script>
-</body>
-</html>
+<script>
+(() => {
+  const root = document.documentElement;
+  const story = document.getElementById('story');
+  const track = document.getElementById('track');
+  const panels = [...track.querySelectorAll(':scope > .panel')];
+  const fill = document.getElementById('fill');
+  const ticksEl = document.getElementById('ticks');
+  const secLabel = document.getElementById('secLabel');
+  const folio = document.getElementById('folio');
+  const navLinks = [...document.querySelectorAll('.mast nav a')];
+  const mq = matchMedia('(min-width: 900px) and (min-aspect-ratio: 1/1)');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)');
+  const SECTIONS = { intro: 'Intro', concept: 'Dressed for Dinner', film: 'The film', fin: 'Coming soon' };
+  const NAVSEC = { intro: 'intro', concept: 'concept', film: 'treatment', fin: 'treatment' };
+  const pad = n => String(n).padStart(2, '0');
+
+  let H = false, cur = 0, tgt = 0, max = 0, vw = innerWidth, vh = innerHeight;
+  let items = [], dirty = true, last = performance.now(), lastIdx = -1;
+
+  // keep each panel's leading images eager when near
+  function warm(fromX) {
+    for (const p of panels) {
+      if (p._warm) continue;
+      if (p._x < fromX + vw * 2.6) {
+        p._warm = true;
+        p.querySelectorAll('img[loading="lazy"]').forEach(i => { i.loading = 'eager'; });
+        if (!reduce.matches) p.querySelectorAll('video[data-src]').forEach(v => { v.src = v.dataset.src; v.removeAttribute('data-src'); v.load(); });
+      }
+    }
+  }
+
+  // motion plates: play only while visible, keep the still as poster and fallback
+  const vids = [...document.querySelectorAll('.ph video')];
+  vids.forEach(v => { v.addEventListener('playing', () => v.classList.add('on'), { once: true }); });
+  const vio = 'IntersectionObserver' in window ? new IntersectionObserver(es => {
+    es.forEach(en => {
+      const v = en.target;
+      if (en.isIntersecting && H && !reduce.matches) { if (v.src) v.play().catch(() => {}); }
+      else if (!v.paused) v.pause();
+    });
+  }, { rootMargin: '0px 40% 0px 40%' }) : null;
+  if (vio) vids.forEach(v => vio.observe(v));
+  // a video whose src arrives after it is already on screen
+  vids.forEach(v => v.addEventListener('loadeddata', () => { const r = v.getBoundingClientRect(); if (H && !reduce.matches && r.right > -vw * .4 && r.left < vw * 1.4) v.play().catch(() => {}); }));
+
+  function measure() {
+    vw = innerWidth; vh = innerHeight;
+    const wasH = H;
+    const ratio = max > 0 ? cur / max : 0;
+    H = mq.matches;
+    root.classList.toggle('h', H);
+    // reset transforms before measuring
+    track.style.transform = '';
+    document.querySelectorAll('.px img, .px video, .dr, .rv').forEach(el => { el.style.transform = ''; el.style.clipPath = ''; });
+    panels.forEach((p, i) => { p._i = i; });
+    if (!H) {
+      story.style.height = '';
+      items = [];
+      buildTicks();
+      dirty = true;
+      return;
+    }
+    max = Math.max(0, track.scrollWidth - vw);
+    story.style.height = (max + vh) + 'px';
+    panels.forEach(p => { p._x = p.offsetLeft; p._w = p.offsetWidth; });
+    items = [];
+    const motion = !reduce.matches;
+    document.querySelectorAll('.px, .rv, .dr').forEach(el => {
+      const r = el.getBoundingClientRect();
+      const it = { el, x: r.left, w: r.width, s: parseFloat(el.dataset.s || '0.05') };
+      it.px = motion && el.classList.contains('px') ? el.querySelector('img') : null;
+      it.pxv = it.px ? el.querySelector('video') : null;
+      it.rv = motion && el.classList.contains('rv');
+      it.dr = motion && el.classList.contains('dr');
+      if (it.px || it.rv || it.dr) items.push(it);
+    });
+    // page numbers in contents
+    document.querySelectorAll('[data-page]').forEach(el => {
+      const t = document.getElementById(el.dataset.page);
+      if (t) el.textContent = 'p. ' + pad(panels.indexOf(t) + 1);
+    });
+    buildTicks();
+    if (wasH) { const y = Math.round(ratio * max); scrollTo(0, y); cur = tgt = y; }
+    else { cur = tgt = Math.min(max, scrollY); }
+    dirty = true;
+  }
+
+  function buildTicks() {
+    ticksEl.innerHTML = '';
+    if (!H) return;
+    const seen = new Set();
+    panels.forEach(p => {
+      const s = p.dataset.sec;
+      if (seen.has(s)) return; seen.add(s);
+      const t = document.createElement('span');
+      t.className = 'tick'; t.dataset.sec = s;
+      t.style.left = (max ? Math.min(1, p._x / max) * 100 : 0) + '%';
+      const b = document.createElement('b');
+      b.textContent = { intro: 'Intro', concept: 'The concept', film: 'The film', fin: 'Fin' }[s];
+      t.appendChild(b);
+      if (s === 'fin') { b.style.left = 'auto'; b.style.right = '0'; }
+      ticksEl.appendChild(t);
+    });
+  }
+
+  function setActive(idx) {
+    if (idx === lastIdx) return; lastIdx = idx;
+    const sec = panels[idx].dataset.sec;
+    secLabel.textContent = SECTIONS[sec];
+    folio.textContent = pad(idx + 1) + ' / ' + pad(panels.length);
+    navLinks.forEach(a => a.classList.toggle('on', a.dataset.go === NAVSEC[sec]));
+    ticksEl.querySelectorAll('.tick').forEach(t => t.classList.toggle('on', t.dataset.sec === sec));
+  }
+
+  function frame(now) {
+    const dt = Math.min(64, now - last); last = now;
+    if (H) {
+      tgt = Math.min(max, Math.max(0, scrollY));
+      const d = tgt - cur;
+      if (Math.abs(d) > 0.2 || dirty) {
+        const k = reduce.matches ? 1 : 1 - Math.pow(1 - 0.115, dt / 16.67);
+        cur = Math.abs(d) < 0.2 ? tgt : cur + d * k;
+        track.style.transform = `translate3d(${-cur.toFixed(2)}px,0,0)`;
+        for (const it of items) {
+          const x = it.x - cur;
+          if (x > vw * 1.15 || x + it.w < -vw * 0.15) continue;
+          const c = (x + it.w / 2 - vw / 2) / vw;
+          if (it.px) { const t = `translate3d(${(-c * it.w * it.s).toFixed(1)}px,0,0)`; it.px.style.transform = t; if (it.pxv) it.pxv.style.transform = t; }
+          if (it.dr) it.el.style.transform = `translate3d(${(c * vw * it.s).toFixed(1)}px,0,0)`;
+          if (it.rv) {
+            let p = (vw - x) / (vw * 0.5); p = p < 0 ? 0 : p > 1 ? 1 : p;
+            const e = 1 - Math.pow(1 - p, 3);
+            it.el.style.clipPath = e >= 1 ? '' : `inset(0 ${((1 - e) * 100).toFixed(2)}% 0 0)`;
+          }
+        }
+        fill.style.transform = `scaleX(${max ? cur / max : 0})`;
+        let idx = 0;
+        for (let i = 0; i < panels.length; i++) if (panels[i]._x <= cur + vw * 0.5) idx = i;
+        setActive(idx);
+        warm(cur);
+        dirty = false;
+      }
+    } else if (dirty) {
+      const docH = document.documentElement.scrollHeight - innerHeight;
+      fill.style.transform = `scaleX(${docH > 0 ? scrollY / docH : 0})`;
+      let idx = 0;
+      for (let i = 0; i < panels.length; i++) if (panels[i].getBoundingClientRect().top <= innerHeight * 0.4) idx = i;
+      setActive(idx);
+      dirty = false;
+    }
+    requestAnimationFrame(frame);
+  }
+
+  function go(id, smooth = true) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const behavior = smooth && !reduce.matches ? 'smooth' : 'auto';
+    if (H) scrollTo({ top: el._x, behavior });
+    else scrollTo({ top: el.getBoundingClientRect().top + scrollY, behavior });
+  }
+
+  document.addEventListener('click', e => {
+    const a = e.target.closest('[data-go]');
+    if (!a) return;
+    e.preventDefault();
+    go(a.dataset.go);
+  });
+
+  addEventListener('keydown', e => {
+    if (!H || e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    const at = tgt + 2;
+    let target;
+    if (e.key === 'ArrowRight') target = panels.find(p => p._x > at);
+    else target = [...panels].reverse().find(p => p._x < tgt - 2);
+    scrollTo({ top: target ? Math.min(max, target._x) : (e.key === 'ArrowRight' ? max : 0), behavior: reduce.matches ? 'auto' : 'smooth' });
+  });
+
+  // Wheel / trackpad: vertical and sideways swipes both move the story
+  addEventListener('wheel', e => {
+    if (!H || e.ctrlKey) return;
+    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? innerHeight : 1;
+    const d = (Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY) * unit;
+    if (!d) return;
+    e.preventDefault();
+    scrollTo(0, Math.max(0, Math.min(max, scrollY + d)));
+  }, { passive: false });
+
+  addEventListener('scroll', () => { dirty = true; }, { passive: true });
+  let rt; addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(measure, 120); });
+  mq.addEventListener?.('change', measure);
+
+  measure();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+  addEventListener('load', measure);
+  const hash = location.hash.slice(1);
+  if (hash && document.getElementById(hash)) requestAnimationFrame(() => go(hash, false));
+  requestAnimationFrame(frame);
+})();
+</script>
+</body></html>
